@@ -52,4 +52,7 @@ a {
     font-weight: 700;
     margin-bottom: 30px;
 }
+.cards__links-box li {
+    margin-bottom: 14px;
+}
 /* // SECTION HERO ______________________________________________________ */
