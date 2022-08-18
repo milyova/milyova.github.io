@@ -32,14 +32,21 @@ body {
 }
 .hero__title {
     max-width: 400px;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 800;
     line-height: 1.2em;
     text-transform: uppercase;
     margin-bottom: 70px;
 }
-.hero__subdivition {
-    font-size: 22px;
+.hero__divition {
+    font-size: 27px;
+    font-weight: 700;
     text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.hero__divition_descr {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
 }
 /* // SECTION HERO ______________________________________________________ */
