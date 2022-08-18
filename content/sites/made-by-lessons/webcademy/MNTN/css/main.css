@@ -1,0 +1,401 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0B1D26;
+    background-image: url('../img/bg.jpg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+
+    font-family: 'Gilroy', serif;   
+    font-size: 18px;
+    font-weight: 700;  
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;    
+    list-style-type: none;
+}
+
+
+
+
+/* COLORS */
+body, a {
+    color: #fff;
+}
+
+.nav-menu a:hover, header .account:hover, .hero-category, .article-subtitle, .article-read-more, .footer-nav-title  {
+    color: #FBD784;
+}
+
+.hero-category::before {
+    background-color: #FBD784; ;
+}
+
+
+
+
+/* BASE */
+.container-wide {
+    max-width: 1790px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1492px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;   
+    align-items: center;     
+}
+
+
+
+
+/* SECTION HEADER */
+.header {
+    padding-top: 64px;
+}
+
+.logo {
+    font-family: 'Chronicle Display', serif;
+    font-size: 32px;    
+}
+
+
+/* top NAV */
+.nav-menu ul {
+    display: flex;    
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.nav-menu li + li {
+    margin-left: 40px;    
+}
+
+.nav-menu a {
+    position: relative;
+    transition: color 0.2s ease-in;    
+    padding-bottom: 5px;
+}
+
+.account {
+    position: relative;
+    font-size: 17px;
+    transition: color 0.2s ease-in;
+    padding-left: 32px;    
+}
+
+.account::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url('../img/signs/sn_account.png');
+    
+}
+
+
+
+/* выплывающее подчеркивание для ссылок при наведении */
+
+.nav-menu a::after {
+    position: absolute;
+    display: block;
+    content: "";
+    left: -10px;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #FBD784;
+    opacity: 0;    
+
+    transition: all 0.2s ease-in;
+}
+
+.nav-menu a:hover::after {    
+    left: 0;
+    bottom: 0;
+    opacity: 1;
+}
+
+
+
+
+/* HEADER hero */
+
+.hero {
+    display: block;
+    max-width: 1000px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    margin-top: 198px;
+    
+    /* анимация, которая срабатывает в .hero:hover */    
+    transition: transform 0.5s cubic-bezier(0.450, -0.015, 0.255, 3);
+}
+
+.hero-category {
+    position: relative;
+    text-transform: uppercase;    
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0.3em;
+    padding-left: 104px;
+}
+
+.hero-category::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    content: "";    
+    width: 72px;
+    height: 2px;
+}
+
+.hero-title {
+    font-family: 'Chronicle Display', serif;
+    text-transform: capitalize;    
+    font-weight: 600;
+    font-size: 88px;    
+    margin-top: 32px;
+}
+
+.hero-scroll {
+    display: inline-block;
+    position: relative;    
+    padding-right: 32px;
+    margin-top: 32px;
+    
+}
+
+.hero-scroll::after {
+    content: "";    
+    display: block;    
+    position: absolute;
+    right: 0;
+    top: 50%;    
+    transform: translateY(-50%);
+    width: 16px;
+    height: 24px;
+    background-image: url('../img/signs/sn_arrow-down.svg');
+}
+
+.hero:hover {
+    transform: translateY(-2%);
+}
+
+
+
+
+/* SELECTION MAIN */
+
+main .container {    
+    padding: 0 15px;
+    margin-top: 843px;
+}
+
+.article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.article:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.article-text {
+    position: relative;
+    max-width: 782px;
+    padding-left: 150px;
+}
+
+.article-text::before {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(-103px);
+
+    content: attr(data-number);
+    line-height: 1;    
+    font-size: 240px;    
+    opacity: 0.1;
+}
+
+.article-subtitle {
+    position: relative;
+    text-transform: uppercase;    
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0.3em;
+    padding-left: 104px;    
+}
+
+.article-subtitle::before {
+    content: "";  
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);   
+     
+    width: 72px;
+    height: 2px;
+    background-color: #FBD784;    
+}
+
+.article-title {
+    max-width: 555px;
+    font-family: 'Chronicle Display', serif;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: 27px;
+}
+
+.article-text p {
+    line-height: 1.78;        
+    margin-top: 27px;
+}
+
+.article-read-more {
+    display: inline-block;
+    position: relative;    
+    padding-right: 36px;
+    margin-top: 27px;
+    
+}
+
+.article-read-more::after {
+    content: "";    
+    display: block;    
+    position: absolute;
+    right: 0;
+    top: 50%;    
+    transform: translateY(-50%);
+    width: 24px;
+    height: 16px;
+    background-image: url('../img/signs/sn_arrow-right.svg');
+}
+
+.article-img {
+    display: block;
+}
+
+
+
+/* SECTION FOOTER */
+
+.footer{    
+    padding: 200px 0 120px 0;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-copyright {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-copyright-descr {
+    max-width: 303px;
+    line-height: 1.78;
+    margin-top: 24px;
+}
+
+.footer-copyright-terms {
+    font-weight: 500;
+    line-height: 1.78;
+    opacity: 0.5;
+    margin-top: auto;
+}
+
+
+
+/* FOOTER NAV */
+.footer-nav-wrapper {
+    display: flex;
+}
+
+.footer-nav + .footer-nav {
+    margin-left: 212px;
+}
+
+.footer-nav {
+    max-width: 200px;
+    font-weight: 500;
+    line-height: 1.78em;
+}
+
+.footer-nav-title {
+    font-size: 24px;
+    line-height: 1.33;
+}
+
+.footer-nav ul{
+    margin-top: 24px;
+    
+}
+
+.footer-nav li {
+    margin-top: 11px;
+}
+
+.footer-nav a {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* выплывающее подчеркивание для ссылок при наведении */
+
+.footer-nav a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -10px;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    opacity: 0;
+
+    transition: all 0.2s ease-in;
+}
+
+.footer-nav a:hover::after {   
+    left: 0;
+    bottom: 0;
+    opacity: 1;
+}
