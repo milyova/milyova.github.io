@@ -1,0 +1,115 @@
+@import "reset.css";
+@import "slick.css";
+@import "jquery.fancybox.css";
+
+/* подключение гугл-шрифтов в css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+/* подключение локальных шрифтов */
+@import "fonts.css";
+
+/* BASE & DEFAULTS _______________________________________________________ */
+.colors {
+    color: #FFFFFF;
+    color: #F402A2;
+    color: #53A1CB;    
+}
+
+body {
+    background-color: #070A1B;
+    font-family: 'Roboto Condensed', sans-serif;      
+    font-size: 14px;
+    line-height: 120%;
+    font-weight: 400;
+    color: #fff;
+}
+
+.container {
+    max-width: 1260px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+
+/* HEADER TOP _______________________________________________________ */
+.header {
+    padding-top: 29px;
+}
+.header__top {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* social buttons */
+.social__wrap {
+    display: flex;
+}
+.social__wrap li + li {
+    margin-left: 30px;
+}
+.btn-social {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;  
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s linear;  
+}
+.btn-social:hover {
+    background-color: #C1A1D2;
+}
+/* // HEADER TOP _______________________________________________________ */
+
+
+
+/* HEADER CONTENT _______________________________________________________ */
+.header__content {
+    min-height: calc(100vh - 100px);
+    background: url('../img/cover/cover_hero.png') no-repeat center top;
+    background-size: cover;
+    color: #fff;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;    
+
+    position: relative;
+}
+.header__content::before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background: url('../img/logo/logo_mercedes-symbol.svg') no-repeat center center;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -25px;
+}
+.header__title {
+    font-family: 'Corporate A Bold';
+    font-size: 72px;
+    line-height: 120%;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+    margin-bottom: 5px;
+}
+.header__title span {
+    text-transform: capitalize;
+}
+.header__descr {
+    font-size: 24px;
+    line-height: 120%;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 50px;
+    
+}
+/* // HEADER CONTENT _______________________________________________________ */
+

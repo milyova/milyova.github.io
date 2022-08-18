@@ -1,0 +1,135 @@
+/* подключение reset.css */
+@import "reset.css";
+
+/* подключение гугл-шрифтов в css */
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap);
+
+
+/* подключение локальных шрифтов */
+@import "fonts.css";
+
+
+/* BASE & DEFAULT ________________________________________ */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.62;
+    font-weight: 500;
+    color: #544837;
+}
+.container {
+    max-width: 1184px;
+    padding: 0 30px;  
+    margin: 0 auto;  
+}
+
+
+/* HEADER ________________________________________ */
+.header {
+    padding: 15px 0;
+}
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* menu */
+.menu {
+    margin-left: auto;
+}
+.menu__list {
+    display: flex;
+}
+.menu__list li + li {
+    margin-left: 23px;
+}
+.menu__link {
+    font-size: 14px;
+    line-height: 2;
+    color: #2f281e;
+}
+
+/* login buttons */
+.login__buttons_wrap {
+    display: flex;  
+    margin-left: 52px;
+    margin-right: 13px;  
+}
+.login__buttons_wrap > *:last-child {
+    margin-left: 14px;
+}
+.btn {
+    border: 1px solid #ff9900;
+    border-radius: 4px;
+    background-color: #ff9900;
+
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #fff;
+
+    display: inline-block;
+    padding: 11px 24px;
+}
+.btn_border {
+    border: 1px solid #bcd0e5;
+    background-color: #fff;
+    color: #173A56;
+}
+/* // HEADER ________________________________________ */
+
+
+/* SECTION HERO ________________________________________ */
+.hero {
+    padding-top: 50px;
+}
+.hero__inner {
+    padding: 90px 0;
+    background: url('../img/art/people-joy.svg') no-repeat right top;
+}
+.hero__content_wrap {
+    max-width: 470px;
+}
+/* text */
+.hero__title {    
+    font-size: 44px;
+    line-height: 1.23;
+    font-weight: 700;
+    color: #2f281e;
+    margin-bottom: 30px;
+}
+.hero__descr {
+    font-size: 18px;
+    line-height: 1.55;
+    font-weight: 400;
+    color: #544837;
+    margin-bottom: 45px;
+}
+/* btn */
+.hero__link_wrap {
+    display: flex;
+    align-items: center;
+}
+.hero__link_wrap > *:last-child {
+    margin-left: 30px;
+}
+.hero__btn {
+    padding: 14px 41px;
+}
+/* link */
+.hero__link {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #FF9900;
+    text-decoration: underline;
+
+    display: inline-flex;
+    padding: 5px 0;
+}
+.hero__link svg {
+    fill: currentColor;
+    margin-right: 8px;
+}
+/* // SECTION HERO ________________________________________ */

@@ -1,0 +1,100 @@
+/* подключение reset.css */
+@import "reset.css";
+
+/* подключение локальных шрифтов */
+@import "fonts.css";
+
+
+/* BASE & DEFAULT ________________________________________ */
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #505050;
+}
+.container {
+    max-width: 1030px;
+    padding: 0 30px;  
+    margin: 0 auto;  
+}
+
+
+/* HEADER _________________________________________ */
+.header__top {
+    height: 100vh;
+    background: url('../img/bg/bg_main.jpg') no-repeat center;
+    background-size: cover;
+    padding: 40px;
+}
+.header__top_inner {
+    height: 100%;
+    border: 2px solid #ECB84C;
+
+    font-family: 'Georgia';
+    font-weight: 400;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+}
+
+/* text */
+.header__title {        
+    font-size: 200px;
+    line-height: 227px;
+    font-weight: 700;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    margin: auto;
+}
+.header__subtitle {
+    font-size: 24px;
+    line-height: 27px;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;    
+
+    display: flex;
+    align-items: center;
+    margin-bottom: -12px;
+}
+.header__subtitle::before,
+.header__subtitle::after {
+    content: '';
+    width: 100%;
+    border-top: 2px solid #ECB84C;
+}
+.header__subtitle::before {
+    margin-right: 30px;
+}
+.header__subtitle::after {
+    margin-left: 30px;
+}
+
+/* menu */
+.menu { 
+    border-bottom: 1px solid rgba(208, 212, 216, 0.5);
+}
+.menu__list {    
+    display: flex;
+    justify-content: center;  
+    align-items: center;     
+}
+.menu__link {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 700;
+    color: #909090;
+
+    padding: 24px 10px 20px;
+    margin: 0 7px;
+    border-bottom: 4px solid transparent;
+    transition: all .5s;    
+}
+.menu__link:hover {
+    color: #4E5665;
+    border-bottom: 4px solid #ECB84C;
+}
+
+/* // HEADER _________________________________________ */

@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Whitman';
+    src: local('Whitman'),
+         url('../fonts/Whitman/Whitman-RomanLF.woff2') format('woff2'),   
+         url('../fonts/Whitman/Whitman-RomanLF.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;  
+  }
+
+  @font-face {
+    font-family: 'Whitman';
+    src: local('Whitman'),
+          url('../fonts/Whitman/Whitman-BoldLF.woff2') format('woff2'),   
+          url('../fonts/Whitman/Whitman-BoldLF.woff') format('woff');           
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;  
+  }

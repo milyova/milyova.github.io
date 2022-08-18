@@ -1,0 +1,131 @@
+/* подключение reset.css */
+@import "reset.css";
+
+/* подключение гугл-шрифтов в css */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700&display=swap);
+
+/* --------------------------------------------- */
+/* BASE & COMMON */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #777;
+}
+
+.container {
+    max-width: 1210px;
+    padding: 0 30px;  
+    margin: 0 auto;  
+}
+.container__middle {
+    max-width: 1500px;
+
+}
+.container__wide {
+    max-width: 1777px;   
+}
+
+/* buttons */
+.btn__base {
+    padding: 18px 72px;
+    border-radius: 4px;
+    background-color: #598bd0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;    
+    color: #fff;
+}
+.btn__border {
+    padding: 15px 72px;    
+    border: 3px solid #333;
+    background: none;
+    color: #333;
+}
+
+/* HEADER */
+.header {
+    padding: 33px 0;
+    box-shadow: 0 5px 10px 0px rgba(0,0,0,0.26)
+}
+.header_wrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;    
+}
+.logo {
+    margin-right: auto;
+}
+
+/* menu ---------------------------- */
+.menu {
+    margin-right: 54px;
+}
+.menu__list {
+    display: flex;
+}
+.menu__list li:not(:last-child) {
+    margin-right: 44px;
+}
+.menu__link {
+    padding: 5px 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: #333;
+}
+.menu__link:hover {
+    color: #6699cc;
+}
+/* // menu ---------------------------- */
+
+/* user account ---------------------------- */
+.header__user-account {
+    display: flex;
+    align-items: center;
+}
+.btn__pre-order {    
+    padding: 12px 25px;
+    background-color: #66cc66;        
+    font-size: 12px;        
+}
+.btn__cart {
+    padding: 10px 0;
+    margin-left: 40px;
+}
+/* // user account ---------------------------- */
+/* // HEADER */
+
+
+/* SECTION HERO ---------------------------------------------------*/
+.hero {
+    padding: 125px 0 216px;
+    background: url('../img/photo/cover__hero.jpg') center top no-repeat;
+    background-size: cover;
+}
+.hero__content_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 650px;    
+}
+.hero__logo {
+    margin-bottom: 30px;
+}
+.hero__title {
+    margin-bottom: 14px;
+    font-size: 89px;
+    font-weight: 300;
+    line-height: 1.06em;
+    color: #040707;
+}
+.hero__descr {
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: 200;
+    line-height: 1.5em;
+}
+.hero__buttons > * {
+    margin-right: 20px;
+}
+/* // SECTION HERO ---------------------------------------------------*/
+
+/* FOOTER */

@@ -1,0 +1,80 @@
+/* подключение reset.css */
+@import "reset.css";
+
+/* подключение гугл-шрифтов в css */
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400&display=swap);
+
+/* подключение локальных шрифтов */
+@import "fonts.css";
+
+
+/* BASE & DEFAULT __________________________________ */
+body {
+    font-family: 'Roboto Condensed';    
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 300;
+    color: #000;
+}
+.container {
+    max-width: 1270px;
+    padding: 0 35px;  
+    margin: 0 auto;  
+}
+/* HEADER __________________________________ */
+.header {
+    height: 100vh;
+    background: url('../images/bg/bg_hero.jpg') no-repeat center bottom;
+    background-size: cover;
+}
+.header__top {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 71px;
+}
+.menu__list {
+}
+.menu__list li {
+    display: inline-block;
+}
+.menu__list li:not(:last-child) {
+    margin-right: 52px;
+}
+.menu__link {
+    padding: 5px 0;
+}
+.menu__link:hover {
+    text-decoration: underline;
+}
+/* phone */
+.header__phone svg {
+    width: 30px;
+    height: 30px;
+    fill: currentColor;
+    margin-right: 10px;
+}
+.phone {
+}
+.header__title {    
+    font-family: 'Balqis';
+    font-size: 250px;
+    line-height: 334px;
+    font-weight: 400;
+    text-align: center;  
+    margin-top: 110px;  
+}
+.header__title span {      
+    font-family: 'Roboto Condensed';    
+    font-size: 56px;
+    line-height: 66px;  
+    font-weight: 300;
+    font-style: italic;
+    text-align: right;
+    display: block;
+    margin-top: -75px;
+    margin-right: 100px;
+}
+/* // HEADER __________________________________ */

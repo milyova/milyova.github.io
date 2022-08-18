@@ -1,0 +1,212 @@
+/* подключение reset.css */
+@import "reset.css";
+
+/* подключение гугл-шрифтов в css */
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700&display=swap);
+
+/* подключение локальных шрифтов */
+@import "fonts.css";
+
+/* ------------------------------------------------------------ */
+/* BASE & DEFAULT */
+
+/* TEMP */
+.colors {       
+    color: #0093A1;
+    color: #B9C400;
+}
+/*  */
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.22em;
+    color: #262C27;    
+}
+.container {
+    max-width: 1240px;
+    padding: 0 20px;  
+    margin: 0 auto;  
+}
+
+/* BUTTONS */
+.btn__small {
+    display: inline-block;
+    padding: 11px 74px;
+    background-color: #262C27;
+
+    font-family: 'Comfortaa', cursive;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.1em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* ------------------------------------------------------------ */
+/* HEADER */
+/* ------------------------------------------------------------ */
+.header {
+    position: relative;
+    min-height: 100vh;
+    background: url('../img/bg/bg_hero.jpg') center center no-repeat;
+    background-size: cover;   
+
+    font-family: 'Comfortaa', cursive;    
+    font-weight: 700; 
+}
+
+/* елки - графический декор для фона */
+.header::before {
+    z-index: 2;
+    content: "";
+    position: absolute;    
+    left: 0;
+    right: 0;
+    bottom: 0;    
+    height: 456px;
+    background: url('../img/graphics/gr__forest-up.png') center center no-repeat;
+    background-size: cover;
+    transform: translateY(38%);
+}
+.header::after {
+    z-index: 3;
+    content: "";
+    position: absolute;    
+    left: 0;
+    right: 0;
+    bottom: 0;    
+    height: 456px;
+    background: url('../img/graphics/gr__forest-up.png') center center no-repeat;
+    background-size: cover;
+    transform: translateY(79%) rotate(180deg);
+}
+/* // елки - графический декор для фона */
+
+/* HEADER toprow ------------------------------------- */
+.header__toprow {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;    
+    padding: 57px 0;
+}
+.header__toprow > * + * {
+    margin-left: 100px;
+}
+
+/* logo */
+.logo {
+    display: inline-block;
+    width: 158px;
+    height: 35px;
+    background: url('../img/logo/logo_Fanatic_black.svg') center center no-repeat;
+    transition: all .3s ease-in-out;
+}
+.logo:hover {
+    background-image: url('../img/logo/logo_Fanatic_blue.svg');
+}
+/* // logo */
+
+.header__tel {    
+    font-size: 20px;    
+}
+/* // HEADER toprow ------------------------------------- */
+
+
+/* HEADER content ------------------------------------- */
+.header__content {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: calc(100vh - 158px);
+}
+/* main text --------------------------- */
+.header__content_maintext {    
+    margin-right: 30px;
+    margin-top: -150px;
+    max-width: 550px;
+
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+}
+.header__title {
+    margin-bottom: 20px;
+    font-size: 64px;
+    line-height: 1.12em;
+}
+.header__descr {
+    font-size: 24px;
+    line-height: 1.08em;
+}
+.header__descr p + p {
+    margin-top: 20px;
+}
+/* // main text --------------------------- */
+
+.header__decor_text {
+    position: absolute;
+    bottom: 25px;         
+    text-transform: uppercase;
+    color: #0093A1; 
+}
+.decor_text--1, .decor_text--2 {
+    font-family: 'Comfortaa', cursive;  
+    font-size: 130px;
+    font-weight: 400;
+    line-height: 1.12em; 
+    opacity: .3;
+}
+.decor_text--1 {
+    z-index: 1;    
+    right: 145px;
+    bottom: 120px;
+}
+.decor_text--2 {
+    z-index: 4;    
+    left: 265px;
+    bottom: 0;
+}
+.decor_text--3 {
+    z-index: 4;
+    right: 145px;
+    max-width: 360px;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.21em;
+    text-align: center;    
+    opacity: 1;
+}
+/* ------------------------------------------------------------ */
+/* // HEADER */
+/* ------------------------------------------------------------ */
+
+
+
+/* ------------------------------------------------------------ */
+/* SECTION */
+/* ------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------ */
+/* // SECTION */
+/* ------------------------------------------------------------ */
+
+
+
+
+/* ------------------------------------------------------------ */
+/* FOOTER */
+/* ------------------------------------------------------------ */
+
+
+/* ------------------------------------------------------------ */
+/* //FOOTER */
+/* ------------------------------------------------------------ */

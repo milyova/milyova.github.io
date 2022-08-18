@@ -1,0 +1,173 @@
+ /* подключение reset.css */
+@import "reset.css";
+
+/* подключение гугл-шрифтов в css */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&family=Work+Sans:wght@300;500;700&display=swap");
+
+/* --------------------------------------------- */
+
+body {  
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    max-width: 1555px;
+    height: 100%;
+    padding: 0 30px;  
+    margin: 0 auto;  
+}
+
+
+/* HEADER */
+
+.header {
+    padding: 75px 0 64px;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: #d8d8d8;
+    background: url('../img/bg/bg_header.jpg') center bottom no-repeat;
+}
+
+
+/* NAV */
+
+.header-nav_wrap {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.nav-list {
+    display: flex;       
+    column-gap: 180px;
+}
+
+.nav-list.right > * {
+    margin-left: -4px;
+}
+
+.nav-link {
+    display: inline-block;
+    
+    padding: 10px 0;    
+    font-size: 34px;
+    font-weight: 300;  
+    letter-spacing: 0.05em;       
+}    
+
+.nav-link.active {    
+    font-weight: 400;
+    letter-spacing: 0.03em;  
+}
+
+
+/* LOGO */
+
+.logo {    
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+
+    margin-top: -5px;
+    margin-left: 65px;
+    
+    font-family: 'Work Sans', sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.logo span {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.logo-underline { 
+    margin-top: 10px;    
+    width: 84%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #abcfaa;
+}
+
+/* HEADER CONTENT */
+
+.header-content_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
+
+    height: 55vh;
+}
+
+.header-order {    
+    text-align: center;
+}
+
+.header-title {    
+    font-size: 90px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.btn {
+    display: inline-block;
+
+    margin-top: 30px;
+    
+    padding: 12px 94px 20px;
+    border-radius: 20px;
+
+    font-family: 'Work Sans', sans-serif;
+    font-size: 41px;
+    font-weight: 500;
+    background-color: #abcfaa;
+}
+
+.loading {
+    
+    width: 120px;
+    height: 32px;
+    border-radius: 50px;
+    border: 4px solid #fff;
+}
+
+
+.social_btn {    
+    padding: 0 30px;
+}
+
+/* --------------------------------------------- */
+
+/* ANIMATION - HOVER */
+
+.nav-link:hover {    
+    border-bottom: #fff 2px solid;    
+    opacity: 0.8;    
+}
+
+.btn:hover {    
+    background-color: #93b893;
+    transition: all 0.25s ease-in;
+}
+
+.social_btn:hover {
+    transform: scale(1.08);
+    transition: all 0.25s ease-in;
+}
+
+
+/* ANIMATION - CLICK */
+
+.btn:active {
+    position: relative;
+    top: 1px;    
+}

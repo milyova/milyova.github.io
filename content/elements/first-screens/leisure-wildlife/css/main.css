@@ -1,0 +1,112 @@
+/* подключение reset.css */
+@import "reset.css";
+
+/* подключение гугл-шрифтов в css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800;900&display=swap');
+
+/* --------------------------------------------- */
+/* BASE & DEFAULT */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+}
+.container {
+    max-width: 1850px;
+    padding: 0 30px;  
+    margin: 0 auto;  
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* HEADER */
+/* ------------------------------------------------------------------------- */
+.header {    
+    position: absolute;
+    top: 0;
+    width: 100%;  
+    padding-top: 20px;    
+    color: #fff;  
+}
+
+/* header columns common */
+.header__content_wrap {
+    display: flex;
+}
+.header__column {
+    display: flex;    
+    align-items: center;
+}
+.header__column.left {
+    width: 53.5%;
+}
+.header__column.right {
+    justify-content: space-between;
+    width: 46.5%;
+}
+/* // header columns common */
+
+
+/* logo & descr*/
+.header__logo-descr {
+    margin-left: 105px;
+    margin-top: 10px;
+    font-size: 18px;
+    letter-spacing: 1.4em;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+/* // logo & descr*/
+
+
+/* nav */
+.nav {
+    margin-left: 83px;
+}
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;    
+}
+.nav-list li:not(:last-child) {
+    margin-right: 85px;
+}
+.nav-link {
+    padding: 10px 0;
+    font-size: 21px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+/* // nav */
+
+
+/* search */
+.btn__search {    
+    margin-left: 75px;
+}
+/* ------------------------------------------------------------------------- */
+/* // HEADER */
+/* ------------------------------------------------------------------------- */
+
+
+
+/* ------------------------------------------------------------------------- */
+/* SECTION HERO */
+/* ------------------------------------------------------------------------- */
+
+section.hero {
+    min-height: 100vh;
+    background: url('../img/bg/_подложка.jpg') center top no-repeat;
+}
+
+/* ------------------------------------------------------------------------- */
+/* // SECTION HERO */
+/* ------------------------------------------------------------------------- */
+
+
+
+
+
+/* SECTION */
+
+/* FOOTER */

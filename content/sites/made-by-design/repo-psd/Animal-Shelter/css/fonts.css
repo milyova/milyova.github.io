@@ -1,0 +1,50 @@
+/* Arial */
+
+@font-face {
+    font-family: 'Arial';
+    src: local('Arial'),
+         url('../fonts/arial.woff2') format('woff2'),
+         url('../fonts/arial.woff') format('woff');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arial';
+    src: local('Ariali'), local('ArialItalic'),
+         local('Arial Italic'), local('Arial-Italic'),
+         url('../fonts/arial-italic.woff2') format('woff2'),
+         url('../fonts/arial-italic.woff') format('woff');
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+}
+
+
+/* Georgia */
+
+@font-face {
+    font-family: 'Georgia';
+    src: local('Georgia'), local('Georgia Regular'),
+         local('GeorgiaRegular'), local('Georgia-Regular'),
+         url('../fonts/georgia-regular.woff2') format('woff2'),
+         url('../fonts/georgia-regular.woff') format('woff');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;    
+}
+
+
+/* Times New Roman */
+
+@font-face {
+    font-family: 'Times New Roman';
+    src: local('Times New Roman'), local('TimesNewRoman'), 
+         local('Times-New-Roman'), 
+         url('../fonts/times-new-roman.woff2') format('woff2'),
+         url('../fonts/times-new-roman.woff') format('woff');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;    
+}

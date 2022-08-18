@@ -44,6 +44,7 @@ a {
     font-size: 27px;
     font-weight: 700;
     text-transform: uppercase;
+    margin-top: 100px;
     margin-bottom: 10px;
 }
 .hero__divition_descr {
@@ -52,7 +53,9 @@ a {
     font-weight: 700;
     margin-bottom: 30px;
 }
-.cards__links-box li {
+
+/* links box */
+.links-box li {
     margin-bottom: 14px;
 }
 /* // SECTION HERO ______________________________________________________ */
