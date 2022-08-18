@@ -2,7 +2,7 @@
 @import "reset.css";
 
 /* подключение гугл-шрифтов в css */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 
 /* подключение локальных шрифтов */
 @import "fonts.css";
@@ -16,11 +16,30 @@ body {
     color: #000;
 }
 .container {
-    max-width: px;
-    padding: 0 40px;  
+    max-width: 1200px;
+    box-sizing: content-box;
+    padding: 0 30px;  
     margin: 0 auto;  
 }
 
-/* HEADER ______________________________________________________ */
 
+/* HEADER ______________________________________________________ */
 /* // HEADER ______________________________________________________ */
+
+/* SECTION HERO ______________________________________________________ */
+.hero {
+    padding: 100px 0;    
+}
+.hero__title {
+    max-width: 400px;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+}
+.hero__subdivition {
+    font-size: 22px;
+    text-transform: uppercase;
+}
+/* // SECTION HERO ______________________________________________________ */
