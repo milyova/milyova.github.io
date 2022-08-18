@@ -1,0 +1,220 @@
+/* подключение reset.css */
+@import "reset.css";
+
+/* подключение гугл-шрифтов в css */
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,600&display=swap);
+
+/* BASE & DEFAULT __________________________________________ */
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px;
+}
+* {
+    /* outline: 1px solid violet; */
+}
+
+:root {
+    --color-dark: #4d4d4d;
+    --color-light:#808080;
+    --color-accent: #5d71dd;
+}
+
+
+/* product card _____________________ */
+
+/* card blank */
+.product {
+    width: 285px;
+    border: 1px solid #d9d9d9;    
+    border-radius: 4px;
+    background: #fff;
+    
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+   
+    padding: 20px;
+    padding-top: 9px;
+}
+
+/* product images */
+.product__image {
+    height: 162px;
+    overflow: hidden;
+
+    display: block;
+
+    position: relative;
+}
+.product__switch {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+/* switch - hover */
+.image-switch {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 20;
+
+    display: flex;
+}
+.image-switch__item {
+    flex-grow: 1;
+    cursor: pointer;
+}
+.image-switch__item:first-child .image-switch__img {
+    opacity: 1;   
+}
+.image-switch__item:hover .image-switch__img {
+    opacity: 1;
+}
+
+/* image */
+.image-switch__img {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    pointer-events: none;
+}
+.image-switch__img img {    
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+     
+    display: flex;
+}
+
+/* image pagination */
+.image-pagination {
+    width: 100%;
+
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    z-index: 30;
+
+    display: flex;
+    justify-content: center;
+}
+.image-pagination__item {
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background: #c4c4c4;
+
+    display: block;
+
+    margin: 0 3px;
+}
+
+/* product title */
+.product__title {
+    font-size: 14px;
+    line-height: 1.43em;
+    color: var(--color-dark);
+
+    margin-bottom: 8px;
+}
+
+/* props */
+.product__props {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+.product__rating {    
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-accent);   
+    
+    margin-right: 10px;
+}
+.product__rating svg {
+    fill: currentColor;
+    margin-right: 8px;
+}
+
+/* testimonials */
+.product__testimonials {
+    color: var(--color-light);
+}
+
+/* info */
+.product__info {
+    font-size: 12px;
+    color: var(--color-light);
+    margin-bottom: 10px;
+}
+.product__term {
+    display: block;
+    margin-bottom: 7px;
+}
+.product__avalable {
+    display: block;
+}
+
+/* price */
+.product__price {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 17px;
+}
+.product-price__current {
+    font-size: 24px;
+    color: var(--color-dark);
+
+    margin-right: 12px;
+}
+.product-price__old {
+    font-size: 12px;
+    text-decoration: line-through;
+    color: var(--color-light);
+}
+
+/* button */
+.product__btn {
+    width: 100%;
+    border-radius: 4px;
+    color: #fff;
+    background-color: var(--color-accent);
+
+    padding: 14px 0;
+
+    transition: all .3s ease-in-out;
+}
+.product__btn:hover {
+    background-color: #6078f1;
+}
+/* // product card _____________________ */
