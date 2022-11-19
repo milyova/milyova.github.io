@@ -1,0 +1,64 @@
+/* SLIDER diagram */
+.tab-slider {
+    max-width: 670px;
+    max-height: 595px;
+    position: absolute;
+    right: 80px;
+    top: 0;
+
+}
+.tab-slider__slide {
+    text-align: right; 
+}
+.tab-slide__diagrambox {
+    width: 670px;
+    height: 460px;
+    border: 1px solid #2D3548;
+    background: #fff;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.box-relax {
+    background: pink;
+}
+.tab-slide__diagrambox img {
+    width: 670px;
+}
+.tab-slide__diagram_title {
+    font-family: 'Alumni Sans';
+    font-size: 28px;
+    line-height: 1.1em;
+    color: #43B2D9;        
+}
+/* // SLIDER diagram */
+
+/* ________ НАСТРОЙКА РАБОТЫ СЛАЙДЕРА ________*/
+/* лента слайдов */
+.tab-slider .slick-track {
+    display: flex;
+}
+/* оболочка слайдера */
+.tab-slider .slick-list {
+    overflow: hidden;
+}
+/* стрелки */
+.tab-slider .slick-arrow {
+    width: 80px;
+    height: 60px;
+    font-size: 0;
+    position: absolute;
+    top: 400px;
+    right: -80px;
+    z-index: 10;
+    
+}
+.tab-slider .slick-arrow.slick-prev {
+    display: none;
+}
+.tab-slider .slick-arrow.slick-next {
+    background: #252c3c url(../images/signs/slider_arrow-right.svg) center center no-repeat;
+}
+/* // стрелки */
