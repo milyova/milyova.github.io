@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'Balqis';
-    src: local('Balqis'),
-         url('../fonts/balqis.woff2') format('woff2'),
-         url('../fonts/balqis.woff') format('woff');
-         font-style: normal;
-         font-weight: 300;
-         font-display: swap;
-}

@@ -1,61 +1,1645 @@
 /* подключение reset.css */
 @import "reset.css";
 
-/* подключение гугл-шрифтов в css */
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 
+/* подключение гугл-шрифтов в css */
+@import url(https://fonts.googleapis.com/css?family=Alumni+Sans:300,regular,500,600,700,500italic&display=swap);
 /* подключение локальных шрифтов */
 @import "fonts.css";
 
 
+/* слайдеры */
+@import "slider-we-tech.css";
+@import "tabs-slider.css";
+@import "slider__famous.css";
+
+
+
+
 /* BASE & DEFAULT ______________________________________________________ */
 body {
-    font-family: '', sans-serif;
+    background-color: #fff;
+    font-family: 'Gilroy', sans-serif;
     font-size: 16px;
+    line-height: 1.7em;
     font-weight: 400;
-}
-.container {
-    max-width: 1200px;
-    box-sizing: content-box;
-    padding: 0 30px;  
-    margin: 0 auto;  
-}
-a {
-    color: blueviolet;
-    text-decoration: underline;
+    font-style: normal;
+    color: #2D3548;
 }
 
+/* containers */
+.container {
+    max-width: 1400px;
+    box-sizing: content-box;
+    padding: 0 40px;  
+    margin: 0 auto;  
+}
+.header .container, .hero .container {
+    max-width: 1250px;
+}
+
+/* buttons */
+.btn {    
+    border-radius: 5px;
+    font-family: 'Alumni Sans';
+    font-size: 30px;
+    line-height: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 18px 55px;
+    display: inline-block;
+}
+a.btn_dark {
+    background: #00D695;
+    color: #fff;
+}
+a.btn_light {
+    color: #00D695;
+    background: #fff;
+}
+
+/* title and accent text */
+.section__title {    
+    font-family: 'Alumni Sans';
+    font-weight: 600;
+    font-size: 65px;
+    line-height: 0.9em;
+    margin-bottom: 40px;
+}
+h3 {
+    font-family: 'Alumni Sans';
+    font-weight: 500;
+    line-height: 88%;
+}
+.section__subtitle {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 18px;
+    line-height: 1.4em;
+    font-weight: 400;
+}
+.text-accent {    
+    font-size: 22px;
+    line-height: 1.4em;
+    font-weight: 600;
+}
+span {
+    font-weight: 700;
+}
+
+/* paddings */
+section {
+    padding-top: 120px;
+    padding-bottom: 140px;
+}
+
+/* video common 16:9 horizontal */
+.videobox {
+    overflow: hidden;
+    border-radius: 12px;
+
+}
+.videobox_youtube {
+    width: 560px;
+}
+.video_youtube, .video_file {
+    width: 100%;  
+    padding-bottom: 56.25%;
+    background: #dedede;    
+    position: relative;
+}
+.video__link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;  
+    
+}
+.video__media {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;    
+}
+
+/* video common 9:16 vertical */
+.videobox_vertical {
+    width: 405px;    
+    max-height: 720px;
+
+    border-radius: 12px;
+    margin-right: 70px;
+
+    overflow: hidden;
+    transform: translateY(-70px);
+}
+.videobox_vertical .video_file {    
+    background: #878787;    
+    padding-bottom: 177.77%;    
+}
+
+/* video into slider */
+.videobox--slider {
+    border-radius: 0;
+    height: 100%;
+}
+
+/* btn play */
+.btn__play {
+    width: 100px;
+    height: 100px;   
+    background: url("../images/signs/sn_play.svg") center center no-repeat;
+    background-size: 100px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;    
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.btn__play--hidden {
+    display: none;
+}
+
+/* btn play youtube ________________________________ */
+.btn__play, .btn__play_youtube {
+    position: absolute;
+    top: 50%;
+    left: 50%;    
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    /* display: none; */
+}
+.btn__youtube_baseform {
+    fill: red;
+    transition: all 0.2s ease-in;
+}
+.btn__youtube_triangle {
+    fill: #fff;
+}
+/* hover */
+.videobox_youtube:hover .btn__youtube_baseform,
+.btn__play_youtube:focus .btn__youtube_baseform {
+    fill: #e10101;
+}
+/* // btn youtube ________________________________ */
+
+
+
 /* HEADER ______________________________________________________ */
+.header {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #fff;
+    z-index: 1000;
+}
+.header__inner {    
+    display: flex;
+    justify-content: flex-end;
+}
+.menu {
+    font-size: 18px;   
+    padding-top: 60px;     
+}
+.menu__list {
+    display: flex;
+    justify-content: center;
+}
+.menu__list li:not(:last-child) {
+    margin-right: 40px;
+}
+.menu__link {
+    padding: 5px 0;
+}
 /* // HEADER ______________________________________________________ */
+
 
 /* SECTION HERO ______________________________________________________ */
 .hero {
-    padding: 100px 0;    
+    min-height: 100vh;
+    /* background: url(../images/background/temp-hero.jpg) center top no-repeat; */
+    background: url(../images/background/bg_main.jpg) center top no-repeat;
+    background-size: cover;
+    font-family: "Alumni Sans", sans-serif;    
+    color: #fff;
 }
-.hero__title {
-    max-width: 400px;
-    font-size: 40px;
-    font-weight: 800;
+.hero__inner {
+    min-height: 80vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.hero__infobox {
+    max-width: 750px;
+    text-align: center;
+}
+/* logo */
+.logo {
+    margin-bottom: 15px;
+}
+.hero__title {    
+    font-size: 80px;
+    line-height: .88em;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.hero__subtitle {
+    font-family: 'Gilroy';
+    font-size: 16px;
+    line-height: 1.4em;
+    font-weight: 400;
+    margin-bottom: 40px;    
+}
+.hero__date {
+    font-size: 35px;
+    line-height: 1em;
+    font-weight: 500;
+    color: #3FFFC5;
+    
+    margin-bottom: 35px;
+}
+.hero__infobox .btn + .btn {
+    margin-left: 15px;
+}
+/* // SECTION HERO ______________________________________________________ */
+
+
+/* SECTION LETTER ______________________________________________________ */
+.letter {
+    background: #EFF3F4;    
+    position: relative;    
+    padding: 0;
+}
+.letter__inner {    
+background: #EEE7D4;
+padding: 65px 180px;
+transform: translateY(-40px);
+box-shadow: 27px 33px 100px #DAEDFE;
+
+}
+.letter__blank {
+    border-radius: 5px;
+    background: #fff;
+    padding: 114px 180px 102px;    
+    box-shadow: 15px 40px 89px rgba(0, 0, 0, 0.19);
+    position: relative;
+}
+.letter__texbox {   
+    background: #FFFFFF;
+    font-size: 16px;
+    line-height: 1.19em; 
+    position: relative;
+    z-index: 1;
+    padding: 55px 80px;
+    box-shadow: 0px 4px 89px rgba(0, 0, 0, 0.17);
+}
+
+/* text */
+.letter__title {        
+    font-family: 'Alumni Sans';
+    font-size: 30px;
     line-height: 1.2em;
-    text-transform: uppercase;
-    margin-bottom: 70px;
+    margin-bottom: 32px;
 }
-.hero__divition {
-    font-size: 27px;
+
+.letter__data {   
+    max-width: 300px;     
+    font-family: 'Alumni Sans', sans-serif;
+    font-size: 24px;
+    line-height: 1.1em;    
+    color: #41bd92;
+    margin-top: 40px;
+    margin-bottom: 4px;
+}
+.letter__invite {
+    font-size: 14px;
     font-weight: 700;
-    text-transform: uppercase;
-    margin-top: 100px;
+    margin: 0 0 10px;
+}
+.letter .btn {
+    padding: 18px 92px;
+}
+.letter__decor {
+    position: absolute;
+}
+.decor1 {
+    top: 2%;
+    left: 6.5%;
+}
+.decor2 {
+    right: 4%;
+    bottom: 18%;
+}
+/* // SECTION LETTER ______________________________________________________ */
+
+
+/* SECTION WE-TECH ______________________________________________________ */
+.we-tech {
+    background: #EFF3F4;
+    padding-top: 65px;
+}
+.slider-we-tech {
+    position: relative;
+}
+/* // SECTION WE-TECH ______________________________________________________ */
+
+/* SECTION WHATIS ______________________________________________________ */
+.whatis__inner {
+    max-width: 935px;
+    margin: 0 auto;
+}
+.whatis .section__title {
+    max-width: 470px;
+    margin-bottom: 40px;
+}
+.whatis__textbox {
+    max-width: 530px;
+    font-size: 18px;
+    margin-left: 380px;
+}
+.whatis .text-accent {
+    margin-bottom: 40px;
+}
+/* // SECTION WHATIS ______________________________________________________ */
+
+
+/* SECTION HOW IT WORKS ______________________________________________________ */
+.howitworks {
+    background-color: #F5F5F5;
+    padding-top: 0;
+}
+.howitworks .container {
+    max-width: 1280px;
+}
+.howitworks__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+/* text */
+.howitworks__textbox {
+    max-width: 720px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.howitworks .section__title {
+    max-width: 470px;
+    margin-top: 90px;
+    margin-bottom: 55px;
+}
+.howitworks .text-accent {
+    margin-bottom: 55px;
+    font-size: 18px;
+    font-weight: 700;
+}
+/* // SECTION HOW IT WORKS ______________________________________________________ */
+
+
+/* SECTION WHY MEDITATION ______________________________________________________ */
+.why-meditation {
+    background: url(../images/background/bg_nature01.jpg) center center no-repeat;
+    background-size: cover;
+}
+.why-meditation .logo{
+    margin-bottom: 25px;
+}
+.why-meditation__inner {
+    max-width: 970px;
+    font-size: 20px;
+    line-height: 1.4em;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+}
+.why-meditation__textbox p + p {
+    margin-top: 25px;
+}
+.why-meditation .section__title {
+    margin-bottom: 30px;
+    font-size: 90px;
+}
+/* // SECTION WHY MEDITATION ______________________________________________________ */
+
+/* SECTION SCIENCE ______________________________________________________ */
+.science {
+    background: #F5F5F5 url(../images/maps/world_map.png) top right no-repeat;
+}
+.science__inner {
+    margin-left: 30px;
+}
+.science__textbox {
+    margin-top: 175px;
+    margin-left: 90px; 
+    font-weight: 500;   
+}
+.science .section__title {    
+    max-width: 730px;    
+    font-size: 70px;
+    line-height: 0.9em;
+    font-weight: 400;
+    margin-bottom: 110px;
+}
+.science__simpletext_box {
+    display: flex;
+    margin-bottom: 60px;
+}
+.science__simpletext_box p {
+    max-width: 480px;
+    letter-spacing: -0.025em;
+    margin: 0;
+    margin-right: 110px;
+}
+.science__simpletext_box p:last-child {
+    max-width: 430px;
+}
+.science__simpletext_box span {
+    color: #01A4C3;
+    font-weight: 600;
+}
+.science__accenttext_box {
+    display: flex;
+
+}
+.accenttext__item {
+    max-width: 380px;
+    font-family: 'Alumni Sans';
+    font-size: 48px;
+    line-height: .85em;
+    font-weight: 600;
+    color: #01A4C3;
+
+    display: flex;
+    align-items: baseline;
+    margin-right: 100px;
+}
+.accenttext__item .number {
+    font-size: 111px;
+    font-weight: 700;
+    margin: 0 10px 0;
+}
+.accenttext__item .multistrings {
+    transform: translateY(-40px);
+}
+/* // SECTION SCIENCE ______________________________________________________ */
+
+
+/* SECTION SCIENCE RESULTS ______________________________________________________ */
+.science-results {
+    padding-bottom: 80px;
+}
+.science-results__inner {
+    display: flex;
+    flex-direction: column;
+}
+.science-results .section__title {
+    max-width: 740px;
+    margin-left: 120px;
+    margin-bottom: 50px;
+}
+
+/* TABS */
+.science-results__tabs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* tabs menu */
+.tabs__head {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+.tabs__toggle {
+    min-width: 245px;  
+    background: #fff;
+    border: 2px solid #2D3548;
+    
+    font-family: 'Alumni Sans';
+    font-weight: 400;
+    font-size: 30px;
+    line-height: .88em;
+    color: #2D3548;
+    
+    text-align: center;
+    padding: 17px 10px;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+.tabs__toggle.is-active, .tabs__toggle:hover, .tabs__toggle:active {
+    background-color: #252c3c;;
+    color: #fff;
+}
+.tabs__toggle + .tabs__toggle {
+    margin-left: 10px;
+}
+/* // tabs menu */
+
+/* tabs content */
+.tabs__body {
+    width: 1185px;
+    position: relative;
+    margin: 0 auto;
+}
+.tabs__content {
+    border: 2px solid #2D3548;
+    padding: 62px 0 62px 84px;
+    display: none;
+    position: relative;
+}
+.tabs__content.is-active {
+    display: block;
+}
+/* title */
+.tabs__title {
+    font-family: 'Alumni Sans';
+    font-size: 55px;
+    line-height: 1.1em;
+    font-weight: 500;
+    background: #fff;
+    display: inline-block;
+    padding: 10px 50px;
+    position: absolute;
+    left: 30px;
+    top: -40px;    
+}
+.tabs-content-wrap {
+    min-height: 550px;
+    min-width: 0;
+    display: flex;    
+    align-items: flex-end;
+    position: relative;
+}
+
+/* описание таба */
+.tab-blank__descr_wrap {
+    min-width: 390px;    
+}
+.tab-blank__descr {
+    max-width: 295px;    
+    font-size: 16px;
+    line-height: 1.7em;
+    letter-spacing: -0.025em;
+    margin-bottom: 40px;
+}
+.tab-blank__photobox {
+    max-width: 390px;
+    max-height: 290px;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+/* // описание таба */
+
+/* // tabs content */
+/* // TABS */
+
+/* btn */
+.science-results .btn {
+    margin: 80px auto;
+}
+
+/* // SECTION SCIENCE RESULTS ______________________________________________________ */
+
+
+/* SECTION HAPPY ______________________________________________________ */
+.happy {
+    background-color: #EEE7D4;
+    padding: 0;
+}
+.happy__inner {
+    background-color: #fff;    
+    padding: 60px 70px 100px;
+}
+.happy__content_wrap {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.happy .section__title {
+    max-width: 550px;
+    margin-bottom: 28px;
+}
+
+
+/* video */
+.happy .videobox {
+    width: 800px;    
+    margin: 0 auto 25px;
+}
+.happy__descr {
+    max-width: 500px;
+    letter-spacing: -0.025em;
+}
+.happy .video_file {
+    padding-bottom: 55.1%;
+}
+
+/* SECTION QUOTE ______________________________________________________ */
+.quote {
+    background: url(../images/background/bg_nature01.jpg) center center no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 95px 0 100px;    
+}
+.quote__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.quote blockquote {
+    max-width: 650px;        
+    font-family: 'Alumni Sans', sans-serif;
+    font-size: 30px;
+    line-height: 1.3em;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.01em;
+    margin-bottom: 22px;
+}
+/* // SECTION QUOTE ______________________________________________________ */
+
+
+/* SECTION FAMOUS ______________________________________________________ */
+.famous {
+    background: #EFF3F4;  
+    padding-bottom: 80px;
+}
+.famous .section__title {
+    max-width: 700px;
+    margin-left: 20px;
+}
+.famous__cards_wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.famous__card {
+    width: 310px;
+    min-height: 540px;
+    border-radius: 5px;
+    background: #fff;
+    overflow: hidden;
+    margin: 20px;
+}
+/* img */
+.famous__card_imgbox {
+    width: 100%;
+    height: 310px;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+.famous__img {
+    width: 100%;
+}
+/* text */
+.famous__card_text-wrap {
+    padding: 25px 38px 38px;
+}
+.gamous__card_title {    
+    font-family: 'Alumni Sans';
+    font-size: 28px;
+    line-height: 1.1em;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.famous__card_subtitle {    
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5em;
+    letter-spacing: .03em;
+}
+/* // SECTION FAMOUS ______________________________________________________ */
+
+
+/* SECTION FAMOUS ABOUT TM ______________________________________________________ */
+.famous-about-tm {
+    padding-top: 0;
+    background: #EFF3F4;  
+}
+.famous-about-tm__inner {
+    max-width: 995px;
+    margin: 0 auto;
+}
+.famous-about-tm .section__title {
+    max-width: 470px;
+    margin-bottom: 85px;
+}
+/* // SECTION FAMOUS ABOUT TM ______________________________________________________ */
+
+/* SECTION COLLECTIVE RESULT ______________________________________________________ */
+    .collective__result {
+        background-color: #eeeff1;
+    }    
+    .collective__result .section__title {
+        max-width: 100%;
+        margin-bottom: 40px;        
+    }
+/* // SECTION COLLECTIVE RESULT ______________________________________________________ */
+
+/* SECTION PEOPLE 10MLN ______________________________________________________ */
+.people-10mln{
+    padding: 0;
+    position: relative;
+}
+
+.image-comparison {
+    max-height: 750px;
+}
+
+/* обертка */
+.image-comparison {
+    position: relative;
+    display: inline-block;    
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+   
+}
+
+/* слайд ДО */
+.image-comparison__before {
+    width: 50%;
+    position: absolute;
+    overflow: hidden;
+    
+}
+.image-comparison__image {
+    display: block;
+}
+
+.image-comparison__titlebox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.people-10mln .section__title {    
+    max-width: 70%;    
+    font-size: 90px;
+    line-height: 93%;  
+    color: #fff;
+    margin-left: 30%;
+}
+
+/* полоса-разделитель */
+.image-comparison__slider {
+    width: 3px;
+    height: 100%;
+    background-color: #fff;
+    cursor: col-resize;
+    outline: none;
+    padding: 0;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* бегунок */
+.image-comparison__slider::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 30px);
+    left: -29px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background: #fff url("../images/signs/slider_arrow-right-dark.svg") center center no-repeat;
+}
+.image-comparison__slider:hover,
+.image-comparison__slider:focus,
+.image-comparison__slider:hover::before,
+.image-comparison__slider:focus::before {
+    background-color: #ccc;
+}
+/* // SECTION PEOPLE 10MLN ______________________________________________________ */
+
+
+
+/* SECTION REASON ______________________________________________________ */
+.reason {
+    padding: 100px 0;
+}
+.reason__inner {
+    max-width: 1300px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.reason .section__title {
+    max-width: 300px;
+    font-family: 'Alumni Sans';
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 90%;
+    text-align: center;
+    margin: -80px 80px 0;
+}
+/* logo */
+.reason__logo {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    background: #2AC87C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+}
+/* columns */
+.reason-part {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* circles */
+.reason__circle {        
+    width: 190px;
+    height: 190px;
+    border: 4px solid #888;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;  
+    margin: 10px;      
+}
+.reason__circle.blue {
+    border-color: #59C4D9;
+}
+.reason__circle.green {
+    border-color: #87E0B5;
+}
+.reason__title {
+    font-family: 'Alumni Sans';
+    font-size: 30px;
+    line-height: 88%;
+    margin-top: 65px;
     margin-bottom: 10px;
 }
-.hero__divition_descr {
-    text-transform: uppercase;
-    font-size: 14px;
+.blue .reason__title{
+    color: #01A4C3;
+}
+.green .reason__title{
+    color: #4AC68A;
+}
+.reason__descr {
+    max-width: 90%;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 120%;    
+    letter-spacing: -0.025em;
+}
+/* // SECTION REASON ______________________________________________________ */
+
+
+/* SECTION ______________________________________________________ */
+.course {
+    background: #F5F5F5;
+    padding: 0;
+}
+
+/* Обложка курса */
+.course-cover {
+    background: url(../images/background/bg_main.jpg) center -30px no-repeat;
+    background-size: cover;
+    padding: 0;
+}
+.course-cover__inner {
+    min-height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.course-cover__infobox {
+    max-width: 620px;
+    text-align: center;
+    margin-left: 25%;
+}
+.course-cover__title {        
+    font-family: 'Alumni Sans';
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 89%;
+    color: #FFFFFF;
+    margin-bottom: 60px;
+}
+.course-cover__date {
+    font-family: 'Alumni Sans';
+    font-weight: 500;
+    font-size: 50px;
+    color: #3FFFC5;
+}
+/* // Обложка курса */
+
+/* Описание курса ______________________________________________________ */
+.course-description {
+    padding: 0;
+}
+.course-description__inner {
+    background: #FFF;
+    padding: 90px 130px;
+    border-radius: 5px;
+    box-shadow: 27px 33px 100px #DAEDFE;
+    display: flex;
+    justify-content: center;
+    margin-top: -60px;
+}
+.course-description__title {
+    max-width: 300px;
+    font-family: 'Alumni Sans';
+    font-size: 55px;
+    line-height: 110%;
+    font-weight: 500;
+    margin-right: 100px;
+}
+.course-description__text {
+    max-width: 740px;
+    font-size: 22px;
+    line-height: 170%;
+    letter-spacing: -0.025em;
+}
+/* // Описание курса ______________________________________________________ */
+
+
+/* Расписание по дням ______________________________________________________ */
+.course-days__inner {
+    display: flex;
+    justify-content: center;
+}
+.days__list {   
+    max-width: 910px;
+    margin: 87px 0;
+}
+.days__item {
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 12px;
+    display: flex;
+    box-shadow: 27px 33px 100px #DAEDFE;
+}
+.days__item + .days__item {
+    margin-top: 32px;
+}
+.days__data {
+    max-width: 195px;
+    max-height: 195px;
+    border-radius: 5px;
+    padding: 85px 25px 25px;        
+    font-family: 'Alumni Sans';
+    font-weight: 600;
+    display: flex;
+}
+.data__week {
+    font-size: 23px;
+}
+.data__day {
+    font-size: 85px;
+    line-height: 0.8em;
+    margin-right: 7px;
+}
+.data__mounth {
+    font-size: 44px;
+}
+.data__time {
+    font-weight: 500;
+    font-size: 26px;
+}
+
+/* colors for days */
+.bg-color1 {
+    background-color: #D3F7B7;
+}
+.bg-color2 {
+    background-color: #B2EFDB;
+}
+.bg-color3 {
+    background-color: #B0EEF4;
+}
+.bg-color4 {
+    background-color: #C8E9FC;
+}
+/* // colors for days */
+
+/* описание дня */
+.days__descr {
+    padding: 30px 62px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.days__descr_title {    
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.4em;
+    margin-bottom: 10px;
+}
+.days__descr_text {
+    letter-spacing: -0.025em;
+    line-height: 1.4em;
+}
+/* // Расписание по дням ______________________________________________________ */
+
+/* Адрес */
+.course-address {
+    padding-top: 250px;
+}
+.course-address .container {
+    position: relative;
+}
+.address_inner {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    width: 100%;
+    z-index: 2;
+}
+.course-address__text {
+    max-width: 420px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 150%;
+    letter-spacing: -0.025em;
+}
+/* // Адрес */
+
+/* Карта */
+#map {
+    max-height: 500px;
+    background-color: #585858;
+}
+/* // Карта */
+
+
+/* Учителя ТМ */
+.course-teachers {
+    padding: 80px 0 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EEEFF1;
+}
+.course-teachers__title {
+    font-family: 'Alumni Sans';
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 110%;
+    margin-bottom: 15px;
+}
+.course-teachers__subtitle {    
+    max-width: 670px;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.course-teachers__subtitle span {
+    font-weight: 700;
+}
+
+/* Карточки */
+.course-teachers__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.course-teachers__card {
+    max-width: 310px;    
+    background-color: #fff;
+    border-radius: 12px;
+    margin: 15px;
+}
+.course-teachers__textbox {
+    padding: 30px 40px 40px;
+}
+.course-teachers__card_title {
+    font-family: 'Alumni Sans';
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 95%;
+    margin-bottom: 10px;
+}
+.course-teachers__card_subtitle {
+    line-height: 150%;
+}
+/* // Учителя ТМ */
+/* // SECTION COURSE ______________________________________________________ */
+
+
+/* SECTION FAQ ______________________________________________________ */
+.faq {
+    background-color: #EEEFF1;
+    padding-top: 0;
+}
+.faq__inner {
+    max-width: 950px;
+    margin: 0 auto;
+}
+.faq__item {    
+    border-radius: 5px;
+    background: #F5F5F5;
+    box-shadow: 4px 4px 15px rgba(45, 63, 126, 0.11);
+}
+.faq__item + .faq__item {
+    margin-top: 17px;
+}
+.faq__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 140%;
+    display: block;
+    padding: 26px 30px 26px 55px;    
+    position: relative;
+}
+.faq__title::after {
+    content: '';
+    width: 25px;
+    height: 25px;
+
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    background: url(../images/signs/slider_arrow-bottom.svg) center center no-repeat;
+}
+.faq__input {    
+    width: 0;
+    height: 0;
+    background: #FFF;
+    border-radius: 5px;
+    box-shadow: 4px 4px 15px rgba(45, 63, 126, 0.11);
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+    }
+.faq__text {
+    border-radius: 0 0 5px 5px;
+    background-color: #fff;
+    font-size: 16px;
+    line-height: 140%;
+    padding: 30px 100px;
+    display: none;
+}
+/* раскрыть вопрос */
+.faq__input:checked ~ .faq__text {
+    display: block;
+}
+.faq__input:checked ~ .faq__title:after {   
+    background: url(../images/signs/slider_arrow-top.svg) center center no-repeat;
+}
+/* // SECTION FAQ ______________________________________________________ */
+
+
+
+/* SECTION PRICE ______________________________________________________ */
+.price__inner {
+    max-width: 1250px;
+    margin: 0 auto;
+    
+}
+.price .section__title {
+    max-width: 320px;
+    margin-bottom: 10px;
+}
+.price .section__subtitle {
+    margin-bottom: 100px;
+}
+
+/* карточки */
+.price-cards__wrap {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+/* декор из листьев */
+.price__decor {
+    position: absolute;
+    top: -23%;
+    left: 30%;
+    z-index: -1;
+    transform: rotate(90deg);
+    width: 300px;
+}
+/* карточки */
+.price-card {    
+    height: auto;
+}
+.card-standart { 
+    transform: translate(45px, 45px);      
+    height: auto;
+    z-index: -1;
+    filter: drop-shadow(27px 3px 100px rgba(218, 237, 254, 0.61));
+}
+.price-card__donation {
+    z-index: 1;
+    display: flex;
+    filter: drop-shadow(26px 25px 100px rgba(204, 221, 236, 0.81));
+}
+.price-card__donation div + div {
+    margin-left: 12px;
+}
+/* о цене */
+.price__about {
+    max-width: 460px;
+    font-size: 18px;    
+    margin: 0 auto;
+    margin-top: -2%;
+    transform: translateX(10%);
+}
+.price__about span {
+    font-weight: 700;
+}
+.price__about_title {
+    font-size: 22px;
+    line-height: 120%;
+    font-weight: 700;
+    margin-top: 60px;
+    margin-bottom: 22px;
+}
+
+/* btn */
+.price__about .btn {
+    margin-top: 50px;
+}
+/* // SECTION PRICE ______________________________________________________ */
+
+
+
+/* SECTION TESTIMONIALS ______________________________________________________ */
+.testimonials {    
+    background-color: #EEE7D4;
+    padding-bottom: 0;
+}
+/* title section */
+.testimonials .section__subtitle {
+    max-width: 510px;
+    margin-bottom: 50px;
+}
+
+.testimonials__title,
+.testimonials__videoblock {
+    padding: 0 8%;    
+    margin: 0 auto;
+}
+.testimonials__title {
+    margin: 0 10px;
+}
+.testimonials__videoblock {
+    background-color: #fff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.testimonials .videobox_youtube  {
+    margin: 10px;
+}
+/* // SECTION TESTIMONIALS ______________________________________________________ */
+
+
+
+/* SECTION NATURE ROOT ______________________________________________________ */
+.nature-root {    
+    background: url(../images/background/bg_nature01.jpg) center center no-repeat;
+    background-size: cover;
+}
+.nature-root__inner {
+    max-width: 90%;
+    font-size: 20px;
+    line-height: 1.4em;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+}
+.nature-root .logo {
+    margin-bottom: 25px;
+}
+.nature-root .section__title {
+    font-size: 80px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.nature-root .section__descr {
+    max-width: 590px;
+    font-family: 'Alumni Sans',sans-serif;
+    font-size: 40px;
+    line-height: 93%;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    margin: 0 auto;
+}
+/* // SECTION NATURE ROOT ______________________________________________________ */
+
+/* SECTION MAHARISHI ______________________________________________________ */
+.maharishi__inner {
+    display: flex;
+    justify-content: center;
+}
+.maharishi .section__title {
+    text-align: center;
+    margin-bottom: 100px;
+}
+.maharishi__photobox {
+    max-width: 431px;
+    max-height: 405px;
+    margin-right: 33px;
+}
+.maharishi__textbox {
+    max-width: 530px;
+    margin-top: 180px;
+}
+.maharishi__card_title {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+.maharishi__textbox p{
+    font-size: 18px;
+    line-height: 140%;
+}
+.maharishi__textbox p span{
+    font-weight: 700;
+}
+/* // SECTION MAHARISHI ______________________________________________________ */
+
+
+/* SECTION COLLECTIVE ______________________________________________________ */
+.collective {
+    background-color: #EEEFF1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.collective__inner {
+    max-width: 1290px;
+}
+.collective__textbox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    line-height: 1.5em;
+}
+.column {
+    width: 46%;
+    margin: 20px;
+}
+.collective__textbox p span {
+    font-weight: 700;
+}
+.section__descr {
+    max-width: 80%;
+    font-size: 18px;
+    line-height: 1.5em;
     font-weight: 700;
     margin-bottom: 30px;
 }
-
-/* links box */
-.links-box li {
-    margin-bottom: 14px;
+.collective__mapbox {
+    margin-top: 100px;
 }
-/* // SECTION HERO ______________________________________________________ */
+img.map__1percent {
+    margin-left: -5%;
+}
+/* // SECTION COLLECTIVE ______________________________________________________ */
+
+
+
+/* SECTION MISSION ______________________________________________________ */
+.mission {
+    position: relative;
+}
+.section__descr {
+    max-width: 550px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.section__descr span {
+    font-weight: 700;
+}
+/* map */
+.misson__map {
+    position: absolute;
+    width: 1920px;
+    top: 10%;
+    right: 0;
+    z-index: -1;
+}
+/* // SECTION MISSION ______________________________________________________ */
+
+
+
+/* TM RUSSIA ______________________ */
+.tmrf {
+    margin-top: 350px;
+}
+.tmrf__inner {
+    max-width: 1140px;
+    background-color: #fff;
+    border-radius: 7px;
+    text-align: center;
+    
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 90px 0;
+    margin: 0 auto;
+
+    box-shadow: 27px 33px 100px #b8cbdc;
+}
+.tmrf .section__title {
+    max-width: 500px;
+}
+
+.tmrf__source {
+    font-family: 'Alumni Sans', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 88%;
+    color: #5873C8;
+}
+
+/* video */
+.tmrf .videobox {
+    width: 800px;
+    margin-bottom: 45px;
+}
+.tmrf .video_file {
+    padding-bottom: 55.1%;
+}
+
+/* text */
+.tmrf__cta {
+    font-weight: 500;
+    margin-top: 20px;
+}
+/* // TM RUSSIA ______________________ */
+/* // SECTION MISSION ______________________________________________________ */
+
+/* form */
+.form__reg-on-course {
+    margin: 30px 0;
+    position: relative;
+}
+.form__reg-on-course input {
+    border-radius: 5px;
+    border: 2px solid #2D3548;
+    max-width: 310px;
+    padding: 10px;
+    margin-right: 8px;
+}
+.form__reg-on-course .btn__form{
+    font-size: 22px;
+    padding: 11px 40px;
+    color: #fff;
+    background-color: #6382E7;
+}
+.form__reg-on-course .username::placeholder {
+    padding-left: 20px;
+}
+.form--decor {
+    max-width: 52px;
+    position: absolute;
+    left: -18px;
+    top: -22px;
+}
+
+/* SECTION CITIES ______________________________________________________ */
+.cities {
+    padding-top: 30px;
+    padding-bottom: 0px;
+}
+.cities__infobox {
+    max-width: 500px;
+    margin-bottom: 100px;
+}
+.cities .section__title {
+    margin-bottom: 30px;
+}
+.cities .section__subtitle {
+    margin-bottom: 70px;
+}
+.cities__instruction .card__title, .add-city__title {
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* alphabet list */
+.cities__alphabet-wrap {
+    margin-bottom: 150px;
+}
+.cities__alphabet-list__inner {
+    column-width: 150px;    /* мин. ширина */
+    column-count: 6;
+    column-gap: 70px;
+    column-rule:1px solid #C2C2C2;
+}
+
+.cities_list {
+    font-family: 'Alumni Sans', sans-serif;    
+}
+.cities_list_litera {
+    font-size: 40px;
+    font-weight: 600;
+}
+.cities_list-cities {
+    font-size: 24px;
+    line-height: 120%;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    margin-top: 0.5em;
+    margin-bottom: 75px;
+}
+/* // alphabet list */
+
+
+/* Добавить город */
+.add-city {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.add-city__title {    
+    font-family: 'Alumni Sans';
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 88%;
+    margin-bottom: 35px;
+}
+.add-city__descr {
+    max-width: 510px;
+    line-height: 1.4em;
+}
+.add-city__descr span {
+    font-weight: 700;
+}
+.phones_wrap {
+    text-align: left;
+    padding-top: 70px;
+    padding-bottom: 80px;
+}
+.teacher-phone {
+    background: url(../images/signs/sn_contact_whatsapp.png) left 8px no-repeat;
+    padding-left: 50px;
+    margin-left: -5%;
+}
+.teacher-phone + .teacher-phone {
+    margin-top: 40px;
+}
+.teacher-phone a {    
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 122.5%;
+    padding: 8px 0;
+    display: inline-block;    
+}
+.phone-descr {    
+    line-height: 122.5%;
+}
+/* // Добавить город */
+/* // SECTION CITIES ______________________________________________________ */
+
+
+/* FOOTER ______________________________________________________ */
+.footer-line1 {
+    background: url(../images/background/bg_nature01.jpg) center 20% no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: #FFF;
+    padding: 70px 0;
+}
+.footer-line1 .menu {
+    padding: 0;
+}
+.footer-line1 .logo {
+    margin-bottom: 30px;
+}
+.footer-line2 {
+    background-color: #406769;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFF;
+    padding: 23px 0;
+}
+/* // FOOTER ______________________________________________________ */

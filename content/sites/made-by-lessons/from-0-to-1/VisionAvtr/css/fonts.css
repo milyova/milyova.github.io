@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'Corporate A Bold';
-    src: local('Corporate-A-Bold'), local('CorporateABold'), local('Corporate A Bold'),
-        url('../fonts/Corporate-A-Bold.woff2') format('woff2'),
-        url('../fonts/Corporate-A-Bold.woff') format('woff');
-        font-display: swap;
-        font-style: normal;
-        font-weight: 400;
-}

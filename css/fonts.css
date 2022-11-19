@@ -1,17 +1,39 @@
 @font-face {
-    font-family: 'Aller';
-    src: local('Aller'),
-         url('../fonts/Aller/Aller_Rg.woff2') format('woff2'),
-         url('../fonts/Aller/Aller.woff') format('woff'),
-         url('../fonts/Aller/Aller_Rg.ttf') format('ttf'),
-         url('../fonts/Aller/Aller_Rg.eot') format('eot');
+    font-family: 'Gilroy';
+    src: local('Gilroy-Regular'), local('GilroyRegular'),        
+        url('../fonts/Gilroy-Regular.woff2') format('woff2'),
+        url('../fonts/Gilroy-Regular.woff') format('woff');        
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: 'Selima';
-    src: local('Selima'),
-         url('../fonts/Selima/selima.woff2') format('woff2'),
-         url('../fonts/Selima/selima.woff') format('woff'),
-         url('../fonts/Selima/selima.ttf') format('ttf'),
-         url('../fonts/Selima/selima.eot') format('eot');
+    font-family: 'Gilroy';
+    src: local('Gilroy-Medium'), local('GilroyMedium'),        
+        url('../fonts/Gilroy-Medium.woff2') format('woff2'),
+        url('../fonts/Gilroy-Medium.woff') format('woff');        
+    font-display: swap;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy-Semibold'), local('GilroySemibold'),        
+        url('../fonts/Gilroy-Semibold.woff2') format('woff2'),
+        url('../fonts/Gilroy-Semibold.woff') format('woff');        
+    font-display: swap;
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy-Bold'), local('Gilroy-Bold'),        
+        url('../fonts/Gilroy-Bold.woff2') format('woff2'),
+        url('../fonts/Gilroy-Bold.woff') format('woff');        
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
 }
