@@ -1,0 +1,21 @@
+.happy-new-year__wrap {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+.happy-new-year__title {
+  font-family: "Great Vibes", serif;
+  font-size: 195px;
+  line-height: 0.85;
+}
+.happy-new-year__text {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 420px;
+}
+.happy-new-year__author {
+  display: block;
+  font-size: 16px;
+  margin-top: 1.8em;
+}

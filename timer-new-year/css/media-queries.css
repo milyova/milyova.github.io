@@ -1,0 +1,122 @@
+@media (max-width: 930px) {
+  /* menu */
+  .navbar {
+    display: flex;
+    align-items: flex-start;
+  }
+  .menu-seasons-bg__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 40px;
+  }
+
+  /* new-year-congratulation  */
+  .happy-new-year__title {
+    font-size: 130px;
+    margin-bottom: 0.05em;
+  }
+  .happy-new-year__text {
+    font-size: 15px;
+  }
+  .happy-new-year__author {
+    margin-top: 2em;
+  }
+}
+@media (max-width: 800px) {
+  /* main content */
+  .info-wrap {
+    width: 100%;
+  }
+  /* timer */
+  .timer__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .timer__list-item {
+    min-width: auto;
+  }
+  .timer__num {
+    font-size: 50px;
+  }
+  .timer__text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 650px) {
+  .countdown__title {
+    font-size: 32px;
+    margin-bottom: 14px;
+  }
+  /* timer */
+  .timer__list {
+    gap: 10px;
+  }
+  .timer__list-item {
+    padding: 24px 12px 20px;
+
+    min-width: auto;
+  }
+  .timer__num {
+    font-size: 40px;
+  }
+  .timer__text {
+    font-size: 13px;
+  }
+  /* new-year-congratulation  */
+  .happy-new-year__title {
+    font-size: 20vw;
+    margin-bottom: 0.12em;
+  }
+  .happy-new-year__author {
+    font-size: 12px;
+  }
+  /* signature */
+  .signature {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 450px) {
+  /* common */
+  .container {
+    padding: 0 20px;
+  }
+  /* menu */
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .menu-seasons-bg__list {
+    gap: 4px 15px;
+  }
+  .info-wrap {
+    top: 55%;
+  }
+  /* timer */
+  .timer__list {
+    gap: 10px;
+  }
+  .timer__list-item {
+    padding: 42px 4px 40px;
+  }
+  .timer__num {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .timer__text {
+    font-size: 10px;
+  }
+  /* new-year-congratulation  */
+  .happy-new-year__text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 375px) {
+  /* new-year-congratulation */
+  .happy-new-year__title {
+    margin-bottom: 0.28em;
+  }
+}
