@@ -41,5 +41,5 @@ btnNewYear.addEventListener('click', function () {
     let componentTimer = document.querySelector('.info-wrap');
     let componentNYCongratulation = document.querySelector('.happy-new-year__wrap');
     componentTimer.classList.add('hlp--hidden');
-    componentNYCongratulation.classList.add('hlp--visible');
+    componentNYCongratulation.classList.toggle('hlp--visible');
 });
