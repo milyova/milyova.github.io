@@ -8,7 +8,7 @@ let btnNewYear = document.getElementById('timer-seasons-bg--new-year');
 
 // смена фона по клику - Фон весна
 btnBgSpring.addEventListener('click', function () {
-    document.getElementById('countdown--seasons-bg').style.backgroundImage = "url(../../images/bg_spring.jpg)";
+    document.getElementById('countdown--seasons-bg').style.backgroundImage = "url(./images/bg_spring.jpg)";
 });
 // смена фона по клику - Фон лето
 btnBgSummer.addEventListener('click', function () {
