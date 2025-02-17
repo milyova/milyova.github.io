@@ -20,7 +20,7 @@
 /* section */
 .section-countdown {
   position: relative;
-  background: #20204a url(../images/bg_forest1.jpg);
+  background: #20204a url(./../images/bg_forest1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
