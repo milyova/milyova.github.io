@@ -1,8 +1,3 @@
- // ЗАГРУЖАЕМ ВСЮ ГРАФИКУ ДЛЯ ФОНОВ ===========================
- const preloadImage = src => (new Image().src = src);
- // предв.загрузка:
- ['img1.jpg', 'img2.jpg'].forEach(preloadImage);
-
  // ПОЛУЧАЕМ СО СТРАНИЦЫ ЦИФРЫ СЧЕТЧИКА ===========================
  const
      visibleNumDays = document.getElementById('daysNum'),
