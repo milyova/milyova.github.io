@@ -7,8 +7,9 @@
 @import "plugins/fireworks.css";
 
 /* components css ======================================== */
-@import "components/new-year-congratulation.css";
-
+@import "components/navbar.css";
+@import "components/timer.css";
+@import "components/new-year-text.css";
 
 /* common */
 .container {
@@ -16,9 +17,8 @@
   padding: 0 50px;
   margin: 0 auto;
 }
-
 /* section */
-.section-countdown {
+.section-timer {
   position: relative;
   background: #20204a url(../images/bg_forest1.jpg);
   background-repeat: no-repeat;
@@ -26,7 +26,7 @@
   background-position: center;
   overflow: hidden;
 }
-.section-countdown::before {
+.section-timer::before {
   content: "";
   position: absolute;
   top: 0;
@@ -37,7 +37,7 @@
   height: 100%;
   background: #00000040;
 }
-.section-countdown__inner {
+.section-timer__inner {
   position: relative;
   z-index: 2;
   height: 100vh;
@@ -51,100 +51,41 @@
   font-family: "Montserrat", sans-serif;
   color: #fff;
 }
-.navbar {
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
-  gap: 120px;
-}
-/* logo */
-.logo-timer {
-  font-family: "Noto Sans Carian", sans-serif;
-  font-weight: 700;
-  line-height: 1;
-  color: inherit;
-}
-.logo-timer span {
-  display: block;
-}
-.logo-timer__text {
-  font-size: 14px;
-}
-.logo-timer__year {
-  font-size: 30px;
-}
-/* menu */
-.menu-seasons-bg__list {
-  display: flex;
-  gap: 40px;
-}
-.menu-seasons-bg__link {
-  padding: 8px 0;
-  text-align: left;
-  font-size: 13px;
-  font-weight: 500;
-  color: #fff;
-}
-
 /* main content */
-.info-wrap {
+.timer__wrap {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
-/* title */
-.countdown__title {
-  font-size: 48px;
-  font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+/* footer */
+.section-footer{
+  font-size: 15px;
 
-  margin-top: auto;
-  margin-bottom: 38px;
 }
-
-/* timer */
-.timer__wrap {
-  margin-bottom: auto;
-}
-.timer__list {
-  display: flex;
-  gap: 30px;
-}
-.timer__list-item {
-  min-width: 150px;
-  border-top: 1px solid #ffffff75;
-  border-left: 2px solid #ffffff75;
-  border-radius: 8px;
-  background-color: #ffffff10;
-  backdrop-filter: blur(5px);
-  box-shadow: 5px 5px 12px #ffffff40;
-  padding: 40px 20px 24px;
-  text-align: center;
-}
-.timer__num {
-  font-size: 70px;
-}
-.timer__text {
-  font-weight: 600;
-  line-height: 1.5;
-  text-transform: uppercase;
-}
-
 /* signature */
 .signature {
-  font-size: 15px;
+  margin-bottom: 0.5em;  
 }
 
-/* ========================================== */
-/* hidden */
+@media (max-width: 930px) {
+  .section-footer {
+    font-size: 12px;
+  }
+}
+@media (max-width: 450px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+/* for elements animation ========================================== */
 .hlp--hidden {
   opacity: 0;
-  transition: all 2s;
 }
 .hlp--visible {
   opacity: 1;
-  transition: all 2s;
+  pointer-events: visible; /* скрыть от мыши и клавиатуры */
+  visibility: visible; /* скрыть от скринридера */
 }
 .hlp--remove {
   display: none;

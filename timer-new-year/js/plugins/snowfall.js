@@ -23,11 +23,11 @@ function documentReady() {
 
     // Запуск и остановка снега из меню =====================================
     // получаем кнопки из документа
-    let btnBgSpring = document.getElementById('timer-seasons-bg--spring');
-    let btnBgSummer = document.getElementById('timer-seasons-bg--summer');
-    let btnBgAutumn = document.getElementById('timer-seasons-bg--autumn');
-    let btnBgWinter = document.getElementById('timer-seasons-bg--winter');
-    let btnBgDecember = document.getElementById('timer-seasons-bg--december');
+    let btnBgSpring = document.getElementById('btn-change-bg--spring');
+    let btnBgSummer = document.getElementById('btn-change-bg--summer');
+    let btnBgAutumn = document.getElementById('btn-change-bg--autumn');
+    let btnBgWinter = document.getElementById('btn-change-bg--winter');
+    let btnBgDecember = document.getElementById('btn-change-bg--december');
     // остановка снега
     let menuButtonsOffSnow = [btnBgSpring, btnBgSummer, btnBgAutumn, btnBgWinter, btnBgDecember];
     menuButtonsOffSnow.forEach((elem) => {
@@ -44,11 +44,9 @@ function documentReady() {
             componentSnowfall.classList.remove('hlp--remove');
         });
     });
-    // end Запуск снега из меню =====================================
+    // end =====================================
 
     function createSnows() {
-
-
         for (var i = 0; i < MAX_SNOW; i++) {
             var appendItem = getRandomItem(i);
             container.append(appendItem);
@@ -57,8 +55,6 @@ function documentReady() {
             goAnimate(animateItem, i, randomTime);
             goAnimate2(animateItem);
         };
-
-        // console.log("// Create snows");
     }
 
     function goAnimate(item, id, randomTime) {

@@ -1,16 +1,21 @@
+ // ЗАГРУЖАЕМ ВСЮ ГРАФИКУ ДЛЯ ФОНОВ ===========================
+ const preloadImage = src => (new Image().src = src);
+ // предв.загрузка:
+ ['img1.jpg', 'img2.jpg'].forEach(preloadImage);
+
  // ПОЛУЧАЕМ СО СТРАНИЦЫ ЦИФРЫ СЧЕТЧИКА ===========================
  const
-     visibleNumDays = document.getElementById('timer-days'),
-     visibleNumHours = document.getElementById('timer-hrs'),
-     visibleNumMinutes = document.getElementById('timer-min'),
-     visibleNumSeconds = document.getElementById('timer-sec');
+     visibleNumDays = document.getElementById('daysNum'),
+     visibleNumHours = document.getElementById('hoursNum'),
+     visibleNumMinutes = document.getElementById('minutesNum'),
+     visibleNumSeconds = document.getElementById('secondsNum');
 
 
  // ПОЛУЧАЕМ ТЕКУЩИЙ ГОД И УСТАНАВЛИВАЕМ ЕГО НА СТРАНИЦУ ===========================
  // получаем текущий год
  const currentYear = new Date().getFullYear();
  // прописываем год в логотип и заголовок
- let timerYear = document.querySelectorAll('.timer-year');
+ let timerYear = document.querySelectorAll('.timer-year-num');
  timerYear.forEach((elem) => {
      elem.innerText = currentYear + 1;
  });
@@ -53,9 +58,10 @@
          //  останавливаем таймер
          clearInterval(timerID);
          // Поздравление с Новым годом! - по таймеру, в полночь НГ2026
-         let componentTimer = document.querySelector('.info-wrap');
-         let componentNYCongratulation = document.querySelector('.happy-new-year__wrap');
+         let componentTimer = document.querySelector('.timer__wrap');
+         let componentNYCongratulation = document.querySelector('.new-year-text__wrap');
          componentTimer.classList.add('hlp--hidden');
+         componentNYCongratulation.classList.remove('hlp--hidden');
          componentNYCongratulation.classList.add('hlp--visible');
      }
  }
@@ -69,16 +75,16 @@
      const currentMonth = new Date().getMonth();
      if (currentMonth >= 2 && currentMonth <= 4) {
          // фон весна
-         document.getElementById('countdown--seasons-bg').style.backgroundImage = "url(../images/bg_spring.jpg)";
+         document.getElementById('section__timer-bg').style.backgroundImage = "url(../images/bg_spring.jpg)";
      } else if (currentMonth >= 5 && currentMonth <= 7) {
          // фон лето
-         document.getElementById('countdown--seasons-bg').style.backgroundImage = "url(../images/bg_summer.jpg)";
+         document.getElementById('section__timer-bg').style.backgroundImage = "url(../images/bg_summer.jpg)";
      } else if (currentMonth >= 8 && currentMonth <= 10) {
          // фон осень
-         document.getElementById('countdown--seasons-bg').style.backgroundImage = "url(../images/bg_autumn.jpg)";
+         document.getElementById('section__timer-bg').style.backgroundImage = "url(../images/bg_autumn.jpg)";
      } else if (currentMonth === 11) {
          // фон декабрь
-         document.getElementById('countdown--seasons-bg').style.backgroundImage = "url(../images/bg_forest1.jpg)";
+         document.getElementById('section__timer-bg').style.backgroundImage = "url(../images/bg_forest1.jpg)";
      }
  }
  // Вызываем функцию сезонного фона 1 раз при загрузке страницы 

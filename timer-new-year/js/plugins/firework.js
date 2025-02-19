@@ -1,12 +1,12 @@
 window.onload = function () {
     // запуск фейерверка из меню
     // получаем кнопки из документа
-    let btnBgSpring = document.getElementById('timer-seasons-bg--spring');
-    let btnBgSummer = document.getElementById('timer-seasons-bg--summer');
-    let btnBgAutumn = document.getElementById('timer-seasons-bg--autumn');
-    let btnBgWinter = document.getElementById('timer-seasons-bg--winter');
-    let btnBgDecember = document.getElementById('timer-seasons-bg--december');
-    let btnNewYear = document.getElementById('timer-seasons-bg--new-year');
+    let btnBgSpring = document.getElementById('btn-change-bg--spring');
+    let btnBgSummer = document.getElementById('btn-change-bg--summer');
+    let btnBgAutumn = document.getElementById('btn-change-bg--autumn');
+    let btnBgWinter = document.getElementById('btn-change-bg--winter');
+    let btnBgDecember = document.getElementById('btn-change-bg--december');
+    let btnNewYear = document.getElementById('btn-new-year-ON');
     // получаем контейнер с фейерверком
     let componentFirework = document.getElementById('fireworks-canvas');
     // остановка фейерверка
@@ -22,6 +22,7 @@ window.onload = function () {
     });
     // Запуск фейерверка по времени - в полночь НГ2026
     startFireWorks();
+
     function startFireWorks() {
         const targetMoment = new Date(`1 Jan ${currentYear + 1} 00:00:00`);
         setInterval(function () {
