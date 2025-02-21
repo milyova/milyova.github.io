@@ -91,3 +91,18 @@
     font-weight: 500;
   }
 }
+
+@media (max-height: 430px) {
+  .timer__title {
+    font-size: 28px;
+    margin-bottom: 4px;
+  }
+  .timer__card {
+    padding: 20px 14px 20px;
+  }
+  .timer__text {
+  }
+  .timer__num {
+    font-size: 42px;
+  }
+}
