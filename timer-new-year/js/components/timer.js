@@ -17,7 +17,7 @@
 
 
  // ЗАДАЕМ ЦЕЛЕВУЮ ДАТУ - ЧИСЛО, МЕСЯЦ, ГОД, ВРЕМЯ ===========================
-  const targetDate = new Date(`1 Jan ${currentYear + 1} 00:00:00`);
+ const targetDate = new Date(`1 Jan ${currentYear + 1} 00:00:00`);
 
 
  // ЗАПУСКАЕМ ТАЙМЕР ОТСЧЕТА ДО ЦЕЛЕВОЙ ДАТЫ ===========================
@@ -63,23 +63,25 @@
 
 
  // МЕНЯЕМ ФОН ПО СЕЗОНАМ ===========================
-
  function seasonsTimerBackground() {
-     // Меняется фон по временам года
      // получаем текущий месяц
      const currentMonth = new Date().getMonth();
-     if (currentMonth >= 2 && currentMonth <= 4) {
+     // меняем фон по сезонам (зависит от месяца)
+     if (currentMonth >= 0 && currentMonth <= 1) {
+         // фон зима
+         document.getElementById('section__bg').style.backgroundImage = "url(../images/bg/bg_winter.jpg)";
+     } else if (currentMonth >= 2 && currentMonth <= 4) {
          // фон весна
-         document.getElementById('section__timer-bg').style.backgroundImage = "url(../images/bg_spring.jpg)";
+         document.getElementById('section__bg').style.backgroundImage = "url(../images/bg/bg_spring.jpg)";
      } else if (currentMonth >= 5 && currentMonth <= 7) {
          // фон лето
-         document.getElementById('section__timer-bg').style.backgroundImage = "url(../images/bg_summer.jpg)";
+         document.getElementById('section__bg').style.backgroundImage = "url(../images/bg/bg_summer.jpg)";
      } else if (currentMonth >= 8 && currentMonth <= 10) {
          // фон осень
-         document.getElementById('section__timer-bg').style.backgroundImage = "url(../images/bg_autumn.jpg)";
+         document.getElementById('section__bg').style.backgroundImage = "url(../images/bg/bg_autumn.jpg)";
      } else if (currentMonth === 11) {
          // фон декабрь
-         document.getElementById('section__timer-bg').style.backgroundImage = "url(../images/bg_forest1.jpg)";
+         document.getElementById('section__bg').style.backgroundImage = "url(../images/bg/bg_forest1.jpg)";
      }
  }
  // Вызываем функцию сезонного фона 1 раз при загрузке страницы 
