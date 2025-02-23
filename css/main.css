@@ -1,0 +1,111 @@
+/* fonts ======================================== */
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+Carian:regular&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Great+Vibes:regular&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600&display=swap);
+
+/* plugins css ======================================== */
+@import "plugins/fireworks.css";
+
+/* components css ======================================== */
+@import "components/navbar.css";
+@import "components/timer.css";
+@import "components/new-year-text.css";
+
+/* common */
+.container {
+  max-width: 1300px;
+  padding: 0 50px;
+  margin: 0 auto;
+}
+/* section */
+.section-timer {
+  position: relative;
+  background-image: url(../images/bg/bg_forest1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.section-timer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #00000040;
+}
+.section-timer__inner {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  padding: 50px 0 28px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 16px;
+
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+/* main content */
+.timer__wrap {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* footer */
+.section-footer {
+  font-size: 15px;
+}
+/* section-footer */
+.section-footer {
+  margin-bottom: 0.5em;
+}
+.link-webmaster:link,
+.link-webmaster:visited,
+.link-webmaster:active,
+.link-webmaster:focus {
+  color: inherit;
+  padding: 3px 0;
+}
+
+/* media for width screen =============================== */
+@media (max-width: 930px) {
+  .section-footer {
+    font-size: 12px;
+  }
+}
+@media (max-width: 450px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+/* media for height screen =============================== */
+@media (max-height: 800px) {
+  .section-footer {
+    font-size: 12px;
+  }
+}
+@media (max-height: 450px) {
+  .section-timer__inner {
+    padding: 22px 0 18px;
+  }
+}
+
+/* for elements animation ========================================== */
+.hlp--hidden {
+  opacity: 0;
+}
+.hlp--visible {
+  opacity: 1;
+  pointer-events: visible; /* скрыть от мыши и клавиатуры */
+  visibility: visible; /* скрыть от скринридера */
+}
+.hlp--remove {
+  display: none;
+}

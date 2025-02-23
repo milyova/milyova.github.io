@@ -1,41 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Будущее портфолио</title>
-  <style>
-    body {
-      padding: 30px 50px;
-      font-family: sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- description -->
+    <meta name="description" content="Таймер обратного отсчета до Нового года 2026. Сколько осталось до Нового года?" />
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- favicons -->
+    <link rel="icon" href="images/favicon/fav_64.png">
+    <link rel="apple-touch" href="images/favicon/fav_apple-touch_180.png">
 
-    h1 {
-      font-size: 30px;
-    }
-
-    h3 {
-      font-size: 16px;
-      font-weight: 400;
-      margin-bottom: 80px;
-    }
-    a {
-      display: block;
-      margin-bottom: 20px;
-    }
-
-  </style>
+    <title>Сколько до Нового года?</title>
 </head>
 
 <body>
-  <h1>Сборка для портфолио</h1>
-  <h3>Татьяна Милёва, веб-разработчик, 2025</h3>
-  <div class="links-wrap">
-    <a href="copy-cat/index.html">Копирование котов</a>
-    <a href="timer-new-year/index.html">Таймер - отсчет до Нового года</a>
-  </div>
+    <section id="section__bg" class="section-timer">
+        <!-- падающий снег -->
+        <div id="snow-animation-container"></div>
+        <!-- фейерверк -->
+        <canvas id="fireworks-canvas" class="fireworks hlp--remove" width="968" height="480"></canvas>
+
+
+        <!-- контент -->
+        <div class="container">
+            <div class="section-timer__inner">
+                <nav class="navbar">
+                    <!-- logo -->
+                    <a class="logo-timer" href="#">
+                        <span class="logo-timer__text">Время до</span>
+                        <span class="logo-timer__year timer-year-num">0000</span>
+                    </a>
+                    <!-- btn burger -->
+                    <button class="btn-burger">
+                        <img class="btn-burger__img" src="./images/signs/sn_snowflake.svg" alt="">
+                    </button>
+                    <!-- buttons menu -->
+                    <div class="menu">
+                        <h3 class="menu__title">Как будет выглядеть таймер:</h3>
+                        <div class="menu__buttons-wrap">
+                            <button id="btn-change-bg--spring" class="btn-menu">Таймер весной</button>
+                            <button id="btn-change-bg--summer" class="btn-menu">Таймер летом</button>
+                            <button id="btn-change-bg--autumn" class="btn-menu">Таймер осенью</button>
+                            <button id="btn-change-bg--winter" class="btn-menu">Таймер зимой</button>
+                            <button id="btn-change-bg--december" class="btn-menu">Таймер в&nbsp;декабре</button>
+                            <button id="btn-new-year-ON" class="btn-menu">Таймер<br> в&nbsp;полночь&nbsp;НГ!</button>
+                        </div>
+                        <!-- signature -->
+                        <footer class="menu__footer">
+                            @ 2026
+                        </footer>
+                    </div>
+                </nav>
+
+                <!-- timer -->
+                <div class="timer__wrap">
+                    <!-- title -->
+                    <h1 class="timer__title">
+                        До нового года <span class="timer-year-num">0000</span>
+                    </h1>
+                    <div class="timer__cards-wrap">
+                        <div class="timer__card">
+                            <div class="timer__text">дней</div>
+                            <div id="daysNum" class="timer__num">00</div>
+                        </div>
+                        <div class="timer__card">
+                            <div class="timer__text">часов</div>
+                            <div id="hoursNum" class="timer__num">00</div>
+                        </div>
+                        <div class="timer__card">
+                            <div class="timer__text">минут</div>
+                            <div id="minutesNum" class="timer__num">00</div>
+                        </div>
+                        <div class="timer__card">
+                            <div class="timer__text">секунд</div>
+                            <div id="secondsNum" class="timer__num">00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- new year congratulation -->
+                <div class="new-year-text__wrap">
+                    <h2 class="new-year-text__title">С Новым годом!</h2>
+                    <p class="new-year-text__text">Желаем в Новом Году новых счастливых событий, ярких приятных эмоций, новых достижений, и много хороших дней, часов, минут и секунд!
+                        <span class="new-year-text__author">Команда новогоднего таймера :)</span>
+                    </p>
+                </div>
+
+                <!-- signature -->
+                <footer class="section-footer">
+                    <div>Новогодний таймер v1.2</div>
+                    <a class="link-webmaster" href="https://t.me/tatiana_milyova">&copy; Верстка и программирование: ТГ&nbsp;@tatiana_milyova | 2025</a>
+                </footer>
+            </div>
+        </div>
+    </section>
+
+    <!-- timer -->
+    <script src="js/components/menu.js"></script>
+    <script src="js/components/timer.js"></script>
+
+    <!-- snowfall - для падающего снега -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="js/plugins/snowfall.js"></script>
+    <!-- фейерверк -->
+    <script src="js/plugins/firework.js"></script>
+
 </body>
 
 </html>

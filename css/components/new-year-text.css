@@ -22,10 +22,10 @@
   margin-top: 1.8em;
 }
 
+/* media for width screen =============================== */
 @media (max-width: 930px) {
-  /* new-year-congratulation  */
   .new-year-text__title {
-    font-size: 130px;
+    font-size: 150px;
     margin-bottom: 0.05em;
   }
   .new-year-text__text {
@@ -51,9 +51,16 @@
 }
 
 @media (max-width: 450px) {
-  /* new-year-congratulation  */
+  .new-year-text__title {
+    font-size: 70px;
+    margin-bottom: 0.3em;
+  }
   .new-year-text__text {
-    font-size: 13px;
+    max-width: 80%;
+    font-size: 12px;
+  }
+  .new-year-text__author {
+    font-size: 12px;
   }
 }
 
@@ -63,9 +70,10 @@
   }
 }
 
+/* media for height screen =============================== */
 @media (max-height: 800px) {
   .new-year-text__title {
-    font-size: 160px;
+    font-size: 100px;
   }
   .new-year-text__text {
     max-width: 550px;
@@ -79,8 +87,7 @@
 
 @media (max-height: 700px) {
   .new-year-text__title {
-    font-size: 120px;
-    max-width: 100%;
+    font-size: 70px;
   }
   .new-year-text__text {
     max-width: 55%;
@@ -92,9 +99,6 @@
 }
 
 @media (max-height: 550px) {
-  .new-year-text__title {
-    font-size: 100px;
-  }
   .new-year-text__text {
     font-size: 12px;
   }
@@ -105,14 +109,11 @@
 
 @media (max-height: 430px) {
   .new-year-text__title {
-    font-size: 50px;
-    margin-bottom: 0.3em;
+    font-size: 60px;
+    margin-bottom: 0.1em;
   }
   .new-year-text__text {
-    max-width: 80%;
-    font-size: 12px;
+    max-width: 40%;
   }
-  .new-year-text__author {
-    font-size: 12px;
-  }
+
 }
