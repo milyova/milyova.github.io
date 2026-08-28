@@ -1,15 +1,19 @@
 const canvas = document.getElementById('scratch-canvas');
 const ctx = canvas.getContext('2d');
 
+// Создаем динамический хэш времени для полного сброса кэша картинок
+const cacheBuster = Date.now();
+
 const imgColor = new Image();
-imgColor.src = 'images/bg-color.jpg';
+imgColor.src = 'images/bg-color.jpg?t=' + cacheBuster;
 
 const imgGray = new Image();
-imgGray.src = 'images/bg-gray.jpg';
+imgGray.src = 'images/bg-gray.jpg?t=' + cacheBuster;
 
 const smokeBrush = new Image();
-smokeBrush.src = 'images/brush-smoke.png'; // Обязательно БЕЗ черного фона!
+smokeBrush.src = 'images/brush-smoke.png?t=' + cacheBuster; // Обязательно БЕЗ черного фона!
 
+// Виртуальный холст для маски
 const maskCanvas = document.createElement('canvas');
 const maskCtx = maskCanvas.getContext('2d');
 
@@ -89,25 +93,15 @@ class SmokeParticle {
 
 // Главный цикл рендеринга и анимации (работает постоянно)
 function animate() {
-    // 1. Обновляем и рисуем частицы на маске
-    // Важно: мы НЕ очищаем maskCanvas полностью через clearRect, 
-    // чтобы старый стертый след оставался прозрачным! Мы лишь дорисовываем изменения.
-    
-    // Но так как частицы меняются, для их динамического рендеринга в текущем кадре:
-    // Мы временно очищаем маску и перерисовываем все живые частицы, 
-    // но чтобы старый след не пропадал, этот подход обычно комбинируют с постоянным холстом.
-    // Для простоты: рисуем новые состояния поверх
-    
     particles = particles.filter(p => p.alpha > 0); // Удаляем исчезнувший дым
     
     // Перерисовываем маску (сначала накопленный старый след, затем новые живые частицы)
-    // Чтобы старый след не стирался, этот код оптимально наносит мазки:
     particles.forEach(p => {
         p.update();
         p.draw();
     });
 
-    // 2. Отрендерить финальную сцену
+    // Отрендерить финальную сцену
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(imgColor, imgRender.x, imgRender.y, imgRender.width, imgRender.height);
 
@@ -139,7 +133,7 @@ function scratch(e) {
     const x = clientX - rect.left;
     const y = clientY - rect.top;
 
-    // Вместо рисования штампа генерируем 2-3 частицы дыма в текущей точке
+    // Генерируем несколько динамических частиц дыма в текущей точке
     for (let i = 0; i < 3; i++) {
         particles.push(new SmokeParticle(x, y));
     }
