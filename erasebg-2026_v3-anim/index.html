@@ -10,8 +10,14 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <!-- Измените это в head -->
-    <link rel="stylesheet" href="css/main.css?v=1.0.1">
+    <!-- удаление хеш для js -->
+    <script>
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  // Переменная Date.now() добавляет текущее время в миллисекундах (например, ?v=1714567890123)
+  link.href = 'css/main.css?v=' + Date.now(); 
+  document.head.appendChild(link);
+</script>
     <!-- ... остальные ваши теги (линки на шрифты и стили) ... -->
 </head>
 
