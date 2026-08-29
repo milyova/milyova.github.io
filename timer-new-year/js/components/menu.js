@@ -29,7 +29,7 @@ btnBgAutumn.addEventListener('click', function () {
 });
 // смена фона по клику - Фон зима
 btnBgWinter.addEventListener('click', function () {
-    document.getElementById('section__bg').style.backgroundImage = "url(./images/bg/bg_winter.jpg)";
+    document.getElementById('section__bg').style.backgroundImage = "url(images/bg/bg_winter.jpg)";
 });
 // смена фона по клику - Фон декабрь
 btnBgDecember.addEventListener('click', function () {
