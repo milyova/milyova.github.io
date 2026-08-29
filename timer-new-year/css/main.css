@@ -57,6 +57,9 @@
   top: 50%;
   transform: translateY(-50%);
 }
+h1 span {
+  font-size: 0.7em;
+}
 /* footer */
 .section-footer {
   font-size: 15px;
