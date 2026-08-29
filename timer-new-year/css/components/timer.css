@@ -8,6 +8,9 @@
   margin-top: auto;
   margin-bottom: 38px;
 }
+.timer__title span{
+  font-size: 0.7em;
+}
 /* timer */
 .timer__cards-wrap {
   display: flex;
