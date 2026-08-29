@@ -17,15 +17,15 @@ btnBurger.addEventListener('click', function () {
 
 // смена фона по клику - Фон весна
 btnBgSpring.addEventListener('click', function () {
-    document.getElementById('section__bg').style.backgroundImage = "url(./images/bg/bg_spring.jpg)";
+    document.getElementById('section__bg').style.backgroundImage = "url(images/bg/bg_spring.jpg)";
 });
 // смена фона по клику - Фон лето
 btnBgSummer.addEventListener('click', function () {
-    document.getElementById('section__bg').style.backgroundImage = "url(./images/bg/bg_summer.jpg)";
+    document.getElementById('section__bg').style.backgroundImage = "url(images/bg/bg_summer.jpg)";
 });
 // смена фона по клику - Фон осень
 btnBgAutumn.addEventListener('click', function () {
-    document.getElementById('section__bg').style.backgroundImage = "url(./images/bg/bg_autumn.jpg)";
+    document.getElementById('section__bg').style.backgroundImage = "url(images/bg/bg_autumn.jpg)";
 });
 // смена фона по клику - Фон зима
 btnBgWinter.addEventListener('click', function () {
@@ -33,7 +33,7 @@ btnBgWinter.addEventListener('click', function () {
 });
 // смена фона по клику - Фон декабрь
 btnBgDecember.addEventListener('click', function () {
-    document.getElementById('section__bg').style.backgroundImage = "url(./images/bg/bg_forest1.jpg)";
+    document.getElementById('section__bg').style.backgroundImage = "url(images/bg/bg_forest1.jpg)";
 });
 // для всех кнопок, кроме новогодней ночи, переключение с поздравления на обратный отсчет, и закрытие меню
 let menuButtonsOnTimer = [btnBgSpring, btnBgSummer, btnBgAutumn, btnBgWinter, btnBgDecember];
