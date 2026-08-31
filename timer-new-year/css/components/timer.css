@@ -8,8 +8,8 @@
   margin-top: auto;
   margin-bottom: 38px;
 }
-.timer__title span{
-  font-size: 0.8rem;
+.current-season{
+  font-size: 0.8em;
   font-weight: 400;
 }
 /* timer */
