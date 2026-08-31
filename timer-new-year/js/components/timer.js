@@ -91,7 +91,7 @@ function seasonsTimerBackground() {
         // фон декабрь
     } else if (currentMonth === 11) {
         document.getElementById('section__bg').style.backgroundImage = "url(images/bg/bg_forest1.jpg)";
-        document.getElementById('timer-season-change').remove;
+        document.getElementById('timer-season-change').textContent = 'декабрь!';
     }
 }
 // Вызываем функцию сезонного фона 1 раз при загрузке страницы 
