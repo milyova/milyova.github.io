@@ -74,7 +74,7 @@ function seasonsTimerBackground() {
     } else if (currentMonth >= 2 && currentMonth <= 4) {
         // фон весна
         document.getElementById('section__bg').style.backgroundImage = "url(images/bg/bg_spring.jpg)";
-        document.getElementsById('timer-season-change').textContent = 'весна';
+        document.getElementById('timer-season-change').textContent = 'весна';
 
     } else if (currentMonth >= 5 && currentMonth <= 7) {
         // фон лето
