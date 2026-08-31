@@ -1,5 +1,8 @@
-function calc() {
+function calcAreaSquare() {
+    // взять данные пользователя
     let a = document.getElementById('inputSide').value;
-    let res = a * a;
-    document.getElementById('resultCalc').innerText = "Площадь квадрата: " + res + " кв.см";
+    // сделать расчеты
+    let res = Number(a) * Number(a);
+    // выдать результат
+    document.getElementById('resultCalc').textContent = "Площадь квадрата: " + res + " кв.см";
 }
