@@ -70,7 +70,7 @@ function seasonsTimerBackground() {
     if (currentMonth >= 0 && currentMonth <= 1) {
         // фон зима
         document.getElementById('section__bg').style.backgroundImage = "url(images/bg/bg_winter.jpg)";
-        document.getElementsById('timer-season-change').textContent = 'зима';
+        document.getElementById('timer-season-change').textContent = 'зима';
     } else if (currentMonth >= 2 && currentMonth <= 4) {
         // фон весна
         document.getElementById('section__bg').style.backgroundImage = "url(images/bg/bg_spring.jpg)";
@@ -79,17 +79,17 @@ function seasonsTimerBackground() {
     } else if (currentMonth >= 5 && currentMonth <= 7) {
         // фон лето
         document.getElementById('section__bg').style.backgroundImage = "url(images/bg/bg_summer.jpg)";
-        document.getElementsById('timer-season-change').textContent = 'лето';
+        document.getElementById('timer-season-change').textContent = 'лето';
 
     } else if (currentMonth >= 8 && currentMonth <= 10) {
         // фон осень
         document.getElementById('section__bg').style.backgroundImage = "url(images/bg/bg_autumn.jpg)";
-        document.getElementsById('timer-season-change').textContent = 'осень';
+        document.getElementById('timer-season-change').textContent = 'осень';
 
     } else if (currentMonth === 11) {
         // фон декабрь
         document.getElementById('section__bg').style.backgroundImage = "url(images/bg/bg_forest1.jpg)";
-        document.getElementsById('timer-season-change').remove;
+        document.getElementById('timer-season-change').remove;
     }
 }
 // Вызываем функцию сезонного фона 1 раз при загрузке страницы 
