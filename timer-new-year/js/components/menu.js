@@ -40,7 +40,7 @@ btnBgWinter.addEventListener('click', function () {
 // смена фона по клику - Фон декабрь
 btnBgDecember.addEventListener('click', function () {
     document.getElementById('section__bg').style.backgroundImage = "url(images/bg/bg_forest1.jpg)";
-    document.getElementById('timer-season-change').remove;
+    document.getElementById('timer-season-change').textContent = 'декабрь!';
 
 });
 // для всех кнопок, кроме новогодней ночи, переключение с поздравления на обратный отсчет, и закрытие меню
