@@ -66,28 +66,30 @@ function timer() {
 function seasonsTimerBackground() {
     // получаем текущий месяц
     const currentMonth = new Date().getMonth();
+    
     // меняем фон по сезонам (зависит от месяца)
+    // фон зима
     if (currentMonth >= 0 && currentMonth <= 1) {
-        // фон зима
         document.getElementById('section__bg').style.backgroundImage = "url(images/bg/bg_winter.jpg)";
         document.getElementById('timer-season-change').textContent = 'зима';
-    } else if (currentMonth >= 2 && currentMonth <= 4) {
+    
         // фон весна
+    } else if (currentMonth >= 2 && currentMonth <= 4) {
         document.getElementById('section__bg').style.backgroundImage = "url(images/bg/bg_spring.jpg)";
         document.getElementById('timer-season-change').textContent = 'весна';
 
-    } else if (currentMonth >= 5 && currentMonth <= 7) {
         // фон лето
+    } else if (currentMonth >= 5 && currentMonth <= 7) {
         document.getElementById('section__bg').style.backgroundImage = "url(images/bg/bg_summer.jpg)";
         document.getElementById('timer-season-change').textContent = 'лето';
 
-    } else if (currentMonth >= 8 && currentMonth <= 10) {
         // фон осень
+    } else if (currentMonth >= 8 && currentMonth <= 10) {
         document.getElementById('section__bg').style.backgroundImage = "url(images/bg/bg_autumn.jpg)";
         document.getElementById('timer-season-change').textContent = 'осень';
 
-    } else if (currentMonth === 11) {
         // фон декабрь
+    } else if (currentMonth === 11) {
         document.getElementById('section__bg').style.backgroundImage = "url(images/bg/bg_forest1.jpg)";
         document.getElementById('timer-season-change').remove;
     }
