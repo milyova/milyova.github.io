@@ -3,7 +3,7 @@ const
     visibleNumDays = document.getElementById('daysNum'),
     visibleNumHours = document.getElementById('hoursNum'),
     visibleNumMinutes = document.getElementById('minutesNum'),
-    visibleNumSeconds = document.getElementById('secondsNum'),
+    visibleNumSeconds = document.getElementById('secondsNum');
     
 
 
@@ -90,7 +90,6 @@ function seasonsTimerBackground() {
         // фон декабрь
         document.getElementById('section__bg').style.backgroundImage = "url(images/bg/bg_forest1.jpg)";
         document.getElementsById('timer-season-change').remove;
-
     }
 }
 // Вызываем функцию сезонного фона 1 раз при загрузке страницы 
